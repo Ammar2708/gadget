@@ -103,21 +103,23 @@ const Hero = () => {
 
               .home-hero-pills {
                 grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-                gap: 0.25rem !important;
-                max-width: 12.75rem !important;
+                gap: 0.45rem !important;
+                width: min(100%, 19.25rem) !important;
+                max-width: 19.25rem !important;
                 margin-top: 1.05rem !important;
                 padding-left: 0 !important;
                 padding-right: 0 !important;
               }
 
               .home-hero-pill {
-                height: 0.9rem !important;
+                height: 1.65rem !important;
                 min-width: 0 !important;
-                padding: 0 0.2rem !important;
-                font-size: 0.42rem !important;
+                padding: 0 0.6rem !important;
+                font-size: 0.72rem !important;
+                font-weight: 700 !important;
                 line-height: 1 !important;
                 white-space: nowrap !important;
-                box-shadow: none !important;
+                box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) !important;
               }
             }
           `}
