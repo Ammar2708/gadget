@@ -167,6 +167,93 @@ const galaxyAModels = [
   },
 ];
 
+const ipodTouchModels = [
+  {
+    title: "iPod Touch 7th Generation",
+    image: "/ipod-touch-7th-generation.jpg",
+    detailSlug: "ipod-touch-7th-generation-repairs",
+  },
+  {
+    title: "iPod Touch 6th Generation",
+    image: "/ipod-touch-6th-generation.jpg",
+    detailSlug: "ipod-touch-6th-generation-repairs",
+  },
+  {
+    title: "iPod Touch 5th Generation",
+    image: "/ipod-touch-5th-generation.jpg",
+    detailSlug: "ipod-touch-5th-generation-repairs",
+  },
+  {
+    title: "iPod Touch 4th Generation",
+    image: "/ipod-touch-4th-generation.jpg",
+    detailSlug: "ipod-touch-4th-generation-repairs",
+  },
+  {
+    title: "iPod Touch 3rd Generation",
+    image: "/ipod-touch-3rd-generation.jpg",
+    detailSlug: "ipod-touch-3rd-generation-repairs",
+  },
+  {
+    title: "iPod Touch 2nd Generation",
+    image: "/ipod-touch-2nd-generation.jpg",
+    detailSlug: "ipod-touch-2nd-generation-repairs",
+  },
+];
+
+const ipodClassicModels = [
+  {
+    title: "iPod Classic 7th Generation",
+    image: "/ipod-classic-7th-generation.jpg",
+    detailSlug: "ipod-classic-7th-generation-repairs",
+  },
+  {
+    title: "iPod Classic 6th Generation",
+    image: "/ipod-classic-6th-generation.jpg",
+    detailSlug: "ipod-classic-6th-generation-repairs",
+  },
+  {
+    title: "iPod Video 5th Generation",
+    image: "/ipod-video-5th-generation.jpg",
+    detailSlug: "ipod-video-5th-generation-repairs",
+  },
+  {
+    title: "iPod 4th Generation",
+    image: "/ipod-4th-generation.jpg",
+    detailSlug: "ipod-4th-generation-repairs",
+  },
+];
+
+const ipodNanoModels = [
+  {
+    title: "iPod Nano 6th Generation",
+    image: "/imgi_2_4e8f8a9680813ab55e9c957f04f4281d1ce5df8b-1280x1280.webp",
+    detailSlug: "ipod-nano-6th-generation-repairs",
+  },
+  {
+    title: "iPod Nano 5th Generation",
+    image: "/imgi_3_fb4dbc5a1be4ac01f1d802041fe031073d30ff13-1280x1280.webp",
+    detailSlug: "ipod-nano-5th-generation-repairs",
+  },
+  {
+    title: "iPod Nano 4th Generation",
+    image: "/imgi_4_c7b7e4aa5e0a05559398e36437ea6408137bb7a4-1280x1280 (1).webp",
+    detailSlug: "ipod-nano-4th-generation-repairs",
+  },
+  {
+    title: "iPod Nano 3rd Generation",
+    image: "/imgi_5_f074b17786fcb93b805f7d1baaea4d4a82ad52ae-1280x1280.webp",
+    detailSlug: "ipod-nano-3rd-generation-repairs",
+  },
+  {
+    title: "iPod Nano 2nd Generation",
+    image: "/imgi_6_c9108d6757ef617f1b6ae65a79a5249fab68066c-1280x1280.webp",
+    detailSlug: "ipod-nano-2nd-generation-repairs",
+  },
+];
+
+const ipodDetailIntro = (title) =>
+  `Choose repair services for your ${title}, including screen, battery, charging, button and audio faults.`;
+
 export const repairDetails = {
   "iphone-14-pro-max-repairs": {
     category: "iphone",
@@ -866,9 +953,87 @@ export const repairDetails = {
     intro:
       "Repair options for Mac mini 2012 models covering power, storage, startup, ports and performance problems.",
   },
+  "ipod-touch-repairs": {
+    category: "ipod",
+    title: "iPod Touch",
+    image: "/imgi_5_ipod-touch.webp",
+    intro:
+      "Select your iPod Touch repair for display, battery, charging, button and audio faults.",
+  },
+  "ipod-classic-repairs": {
+    category: "ipod",
+    title: "iPod Classic",
+    image: "/imgi_3_ipod-classic.webp",
+    intro:
+      "Choose iPod Classic repairs for battery, charging, storage, click wheel and audio faults.",
+  },
+  "ipod-nano-repairs": {
+    category: "ipod",
+    title: "iPod Nano",
+    image: "/imgi_4_ipod-nano.webp",
+    intro:
+      "Choose iPod Nano repairs for battery, charging, display, button and audio issues.",
+  },
+  ...Object.fromEntries(
+    ipodTouchModels.map((model) => [
+      model.detailSlug,
+      {
+        category: "ipod",
+        title: model.title,
+        image: model.image,
+        intro: ipodDetailIntro(model.title),
+      },
+    ]),
+  ),
+  ...Object.fromEntries(
+    ipodClassicModels.map((model) => [
+      model.detailSlug,
+      {
+        category: "ipod",
+        title: model.title,
+        image: model.image,
+        intro: ipodDetailIntro(model.title),
+      },
+    ]),
+  ),
+  ...Object.fromEntries(
+    ipodNanoModels.map((model) => [
+      model.detailSlug,
+      {
+        category: "ipod",
+        title: model.title,
+        image: model.image,
+        intro: ipodDetailIntro(model.title),
+      },
+    ]),
+  ),
 };
 
 export const modelFamilies = {
+  "ipod-touch": {
+    category: "ipod",
+    title: "iPod Touch",
+    heading: "Product Repairs",
+    intro:
+      "We offer a large selection of iPod Touch repairs including screens, batteries, charging ports, button faults and audio issues for popular generations.",
+    models: ipodTouchModels,
+  },
+  "ipod-classic": {
+    category: "ipod",
+    title: "iPod Classic",
+    heading: "Product Repairs",
+    intro:
+      "We offer iPod Classic repairs including batteries, charging ports, headphone sockets, storage faults, click wheel issues and display problems.",
+    models: ipodClassicModels,
+  },
+  "ipod-nano": {
+    category: "ipod",
+    title: "iPod Nano",
+    heading: "Product Repairs",
+    intro:
+      "We offer iPod Nano repairs including screens, batteries, charging ports, button faults and audio issues for popular generations.",
+    models: ipodNanoModels,
+  },
   "galaxy-flip-fold-series": {
     category: "samsung",
     title: "Galaxy Flip & Fold series",
@@ -1491,11 +1656,45 @@ export const macRepairOptions = [
   },
 ];
 
+export const ipodRepairOptions = [
+  {
+    title: "Screen Replacement",
+    description: "Replacement display or glass service for cracked or faulty iPod screens.",
+    price: "GBP 69",
+  },
+  {
+    title: "Battery",
+    description: "Replacement battery for poor battery life, shutdowns or charging instability.",
+    price: "GBP 49",
+  },
+  {
+    title: "Charging Port",
+    description: "Charging port repair if your iPod will not charge or connect reliably.",
+    price: "GBP 59",
+  },
+  {
+    title: "Home Button",
+    description: "Home button repair for weak, stuck or unresponsive button behavior.",
+    price: "GBP 45",
+  },
+  {
+    title: "Headphone Socket",
+    description: "Audio socket repair for crackling sound, loose connection or no output.",
+    price: "GBP 49",
+  },
+  {
+    title: "Diagnostics",
+    description: "Inspection for software, audio, charging or power faults before repair.",
+    price: "GBP 29",
+  },
+];
+
 export const getRepairOptions = (category) => {
   if (category === "samsung") return samsungRepairOptions;
   if (category === "ipad") return ipadRepairOptions;
   if (category === "watch") return watchRepairOptions;
   if (category === "mac") return macRepairOptions;
+  if (category === "ipod") return ipodRepairOptions;
   return iphoneRepairOptions;
 };
 

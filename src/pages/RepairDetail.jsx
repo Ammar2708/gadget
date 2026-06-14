@@ -15,6 +15,7 @@ const RepairDetail = () => {
     watch: "/watch repair",
     mac: "/mac repair",
     iphone: "/iphone repair",
+    ipod: "/ipod repair",
   };
 
   const toggleOption = (title) => {

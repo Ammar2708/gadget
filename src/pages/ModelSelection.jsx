@@ -9,6 +9,7 @@ const ModelSelection = () => {
     ipad: { label: "Back to iPad models", path: "/ipad repair" },
     mac: { label: "Back to Mac models", path: "/mac repair" },
     samsung: { label: "Back to Samsung models", path: "/samsung repairs" },
+    ipod: { label: "Back to iPod models", path: "/ipod repair" },
   };
   const back = backLinks[family.category] || backLinks.ipad;
 

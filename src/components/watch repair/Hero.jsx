@@ -190,9 +190,9 @@ const Hero = () => {
           </p>
         </div>
         <img
-          src="/imgi_13_additional-services.webp"
+          src="/additional-services-camera-full.png"
           alt="Additional device repair services"
-          className="h-[260px] w-full object-cover sm:h-[330px]"
+          className="h-[260px] w-full bg-white object-contain sm:h-[330px]"
         />
       </section>
 

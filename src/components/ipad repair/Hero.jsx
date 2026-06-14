@@ -196,9 +196,9 @@ const Hero = () => {
           </p>
         </div>
         <img
-          src="/imgi_13_additional-services.webp"
+          src="/additional-services-camera-full.png"
           alt="Additional iPad repair services"
-          className="h-[250px] w-full object-cover sm:h-[320px]"
+          className="h-[250px] w-full bg-white object-contain sm:h-[320px]"
         />
       </section>
 

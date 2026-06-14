@@ -92,7 +92,7 @@ const Hero = () => {
       <section className="bg-[#f4f4f4]">
         <div className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-14 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-16">
           <img
-            src="/imgi_47_WhatsApp-Image-2024-12-30-at-18.58.20.webp"
+            src="/imgi_6_fpdl.webp"
             alt="iPhone repair service"
             className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[500px]"
           />
@@ -191,9 +191,9 @@ const Hero = () => {
           </p>
         </div>
         <img
-          src="/imgi_13_additional-services.webp"
+          src="/additional-services-camera-full.png"
           alt="Additional iPhone repair services"
-          className="h-[250px] w-full object-cover sm:h-[320px]"
+          className="h-[250px] w-full bg-white object-contain sm:h-[320px]"
         />
       </section>
 
@@ -247,7 +247,7 @@ const Hero = () => {
           </div>
           <div>
             <img
-              src="/imgi_49_default.webp"
+              src="/iphone-minor-details-tools-alt.jpg"
               alt="Detailed iPhone repair"
               className="mx-auto h-[340px] w-full object-cover"
             />

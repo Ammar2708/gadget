@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { toRepairSlug } from "../../data/repairDetails";
 import { FaLock, FaRegThumbsUp, FaSearch } from "react-icons/fa";
 
 const ipodModels = [
-  { title: "iPod Touch", image: "/imgi_5_ipod-touch.webp" },
-  { title: "iPod Classic", image: "/imgi_3_ipod-classic.webp" },
-  { title: "iPod Nano", image: "/imgi_4_ipod-nano.webp" },
+  { title: "iPod Touch", image: "/imgi_5_ipod-touch.webp", familySlug: "ipod-touch" },
+  { title: "iPod Classic", image: "/imgi_3_ipod-classic.webp", familySlug: "ipod-classic" },
+  { title: "iPod Nano", image: "/imgi_4_ipod-nano.webp", familySlug: "ipod-nano" },
 ];
 
 const benefits = [
@@ -59,7 +60,15 @@ const Hero = () => {
 
         <div className="rmg-model-grid mt-12 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {ipodModels.map((model) => (
-            <Link key={model.title} to="/contact" className="rmg-model-card group text-center">
+            <Link
+              key={model.title}
+              to={
+                model.familySlug
+                  ? `/model?slug=${model.familySlug}`
+                  : `/detail?slug=${toRepairSlug(model.title)}`
+              }
+              className="rmg-model-card group text-center"
+            >
               <div className="rmg-model-media flex h-[210px] items-center justify-center rounded-lg bg-[#f4f5f6] p-8">
                 <img
                   src={model.image}
