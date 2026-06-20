@@ -260,127 +260,127 @@ const iphoneDetailIntro = (title) =>
 const additionalIphoneModels = [
   {
     title: "iPhone 17 Pro Max",
-    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+    image: "/img33.png",
     detailSlug: "iphone-17-pro-max-repairs",
   },
   {
     title: "iPhone 17 Pro",
-    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+    image: "/img31.png",
     detailSlug: "iphone-17-pro-repairs",
   },
   {
     title: "iPhone 17",
-    image: "/imgi_39_IMG-18071437_m_jpeg_1.webp",
+    image: "/img30.png",
     detailSlug: "iphone-17-repairs",
   },
   {
     title: "iPhone Air",
-    image: "/imgi_41_iPhone_17_Air_SpaceBlack_Grid_394ec352-dd77-4290-9e0f-3d7974b6f5f3.webp",
+    image: "/img29.png",
     detailSlug: "iphone-air-repairs",
   },
   {
     title: "iPhone 16 Pro Max",
-    image: "/imgi_107_iPhone12ProMaxGraphile_1800x.webp",
+    image: "/img28.png",
     detailSlug: "iphone-16-pro-max-repairs",
   },
   {
     title: "iPhone 16 Pro",
-    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+    image: "/img27.png",
     detailSlug: "iphone-16-pro-repairs",
   },
   {
     title: "iPhone 16",
-    image: "/imgi_41_iPhone_17_Air_SpaceBlack_Grid_394ec352-dd77-4290-9e0f-3d7974b6f5f3.webp",
+    image: "/img26.png",
     detailSlug: "iphone-16-repairs",
   },
   {
     title: "iPhone 15 Pro Max",
-    image: "/imgi_107_iPhone12ProMaxGraphile_1800x.webp",
+    image: "/img25.png",
     detailSlug: "iphone-15-pro-max-repairs",
   },
   {
     title: "iPhone 15 Pro",
-    image: "/imgi_101_iPhone12ProMaxGraphile_1800x-1536x1536.webp",
+    image: "/img25.png",
     detailSlug: "iphone-15-pro-repairs",
   },
   {
     title: "iPhone 15",
-    image: "/imgi_39_IMG-18071437_m_jpeg_1.webp",
+    image: "/img24.png",
     detailSlug: "iphone-15-repairs",
   },
   {
     title: "iPhone 12 mini",
-    image: "/imgi_2_iphone.webp",
+    image: "/img8.png",
     detailSlug: "iphone-12-mini-repairs",
   },
   {
     title: "iPhone 11",
-    image: "/imgi_260_249852_0_snn6go-2048x2048.webp",
+    image: "/iphone11.png",
     detailSlug: "iphone-11-repairs",
   },
   {
     title: "iPhone XS Max",
-    image: "/imgi_2_iphone.webp",
+    image: "/img11.png",
     detailSlug: "iphone-xs-max-repairs",
   },
   {
     title: "iPhone XS",
-    image: "/imgi_2_iphone.webp",
+    image: "/img11.png",
     detailSlug: "iphone-xs-repairs",
   },
   {
     title: "iPhone XR",
-    image: "/imgi_260_249852_0_snn6go-2048x2048.webp",
+    image: "/img23.png",
     detailSlug: "iphone-xr-repairs",
   },
   {
     title: "iPhone SE (2nd Generation)",
-    image: "/imgi_270_iPhone_SE3_Starlight_PDP_Image_Position-1A__en-US_5eeddc15-3457-4154-ad71-fea2ea8bbd74-2048x2048.webp",
+    image: "/img21.png",
     detailSlug: "iphone-se-2nd-generation-repairs",
   },
   {
     title: "iPhone SE (1st Generation)",
-    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    image: "/img12.png",
     detailSlug: "iphone-se-1st-generation-repairs",
   },
   {
     title: "iPhone 8 Plus",
-    image: "/imgi_240_apple-iphone-7-black.webp",
+    image: "/img21.png",
     detailSlug: "iphone-8-plus-repairs",
   },
   {
     title: "iPhone 8",
-    image: "/imgi_240_apple-iphone-7-black.webp",
+    image: "/img20.png",
     detailSlug: "iphone-8-repairs",
   },
   {
     title: "iPhone 7 Plus",
-    image: "/imgi_240_apple-iphone-7-black.webp",
+    image: "/img19.png",
     detailSlug: "iphone-7-plus-repairs",
   },
   {
     title: "iPhone 7",
-    image: "/imgi_240_apple-iphone-7-black.webp",
+    image: "/img18.png",
     detailSlug: "iphone-7-repairs",
   },
   {
     title: "iPhone 6S Plus",
-    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    image: "/img17.png",
     detailSlug: "iphone-6s-plus-repairs",
   },
   {
     title: "iPhone 6S",
-    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    image: "/img17.png",
     detailSlug: "iphone-6s-repairs",
   },
   {
     title: "iPhone 6 Plus",
-    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    image: "/img15.png",
     detailSlug: "iphone-6-plus-repairs",
   },
   {
     title: "iPhone 6",
-    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    image: "/img14.png",
     detailSlug: "iphone-6-repairs",
   },
 ];
@@ -389,84 +389,84 @@ export const repairDetails = {
   "iphone-14-pro-max-repairs": {
     category: "iphone",
     title: "iPhone 14 Pro Max",
-    image: "/imgi_2_iphone.webp",
+    image: "/img4.png",
     intro:
       "Is your iPhone 14 Pro Max in need of a little TLC? Our repair services cover common issues so your device can stay in top condition.",
   },
   "iphone-14-pro-repairs": {
     category: "iphone",
     title: "iPhone 14 Pro",
-    image: "/imgi_2_iphone.webp",
+    image: "/img4.png",
     intro:
       "Choose practical repair options for your iPhone 14 Pro, with clear pricing and careful final checks.",
   },
   "iphone-14-plus-repairs": {
     category: "iphone",
     title: "iPhone 14 Plus",
-    image: "/imgi_2_iphone.webp",
+    image: "/img4.png",
     intro:
       "We repair iPhone 14 Plus faults including displays, batteries, charging ports, speakers and camera issues.",
   },
   "iphone-14-repairs": {
     category: "iphone",
     title: "iPhone 14",
-    image: "/imgi_2_iphone.webp",
+    image: "/img4.png",
     intro:
       "Select the iPhone 14 repair you need and our team will confirm the best practical option before work begins.",
   },
   "iphone-13-mini-repairs": {
     category: "iphone",
     title: "iPhone 13 mini",
-    image: "/imgi_2_iphone.webp",
+    image: "/img5.png",
     intro:
       "Compact iPhones deserve careful repair work. Pick the service needed for your iPhone 13 mini.",
   },
   "iphone-12-pro-max-repairs": {
     category: "iphone",
     title: "iPhone 12 Pro Max",
-    image: "/imgi_2_iphone.webp",
+    image: "/img6.png",
     intro:
       "We handle iPhone 12 Pro Max screen, battery, camera, charging and audio repairs with clear pricing.",
   },
   "iphone-12-pro-repairs": {
     category: "iphone",
     title: "iPhone 12 Pro",
-    image: "/imgi_2_iphone.webp",
+    image: "/img7.png",
     intro:
       "Choose from the available iPhone 12 Pro repair options below and submit your preferred services.",
   },
   "iphone-12-repairs": {
     category: "iphone",
     title: "iPhone 12",
-    image: "/imgi_2_iphone.webp",
+    image: "/img8.png",
     intro:
       "Select common iPhone 12 repairs including display, battery, charging and speaker services.",
   },
   "iphone-11-pro-max-repairs": {
     category: "iphone",
     title: "iPhone 11 Pro Max",
-    image: "/imgi_2_iphone.webp",
+    image: "/img9.png",
     intro:
       "Repair options for iPhone 11 Pro Max faults, checked carefully before collection.",
   },
   "iphone-11-pro-repairs": {
     category: "iphone",
     title: "iPhone 11 Pro",
-    image: "/imgi_2_iphone.webp",
+    image: "/img10.png",
     intro:
       "Choose a repair option for your iPhone 11 Pro and our technicians will inspect the fault.",
   },
   "iphone-x-repairs": {
     category: "iphone",
     title: "iPhone X",
-    image: "/imgi_2_iphone.webp",
+    image: "/img11.png",
     intro:
       "Keep your iPhone X running with display, battery, charging and speaker repair options.",
   },
   "iphone-se-repairs": {
     category: "iphone",
     title: "iPhone SE",
-    image: "/imgi_2_iphone.webp",
+    image: "/img12.png",
     intro:
       "Select the repair your iPhone SE needs and we will confirm parts and pricing before work begins.",
   },
@@ -1603,11 +1603,6 @@ export const iphoneRepairOptions = [
     title: "Display Assembly",
     description: "Replacement OLED display assembly to repair a damaged screen.",
     price: "£149",
-  },
-  {
-    title: "Display & Rear",
-    description: "OLED display assembly and rear housing replacement.",
-    price: "£239",
   },
   {
     title: "Battery",
