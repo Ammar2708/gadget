@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaLock, FaRegThumbsUp, FaSearch } from "react-icons/fa";
+import FurtherServices from "../FurtherServices";
 import { toRepairSlug } from "../../data/repairDetails";
 
 const models = [
@@ -197,25 +198,10 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="bg-[#f2f2f2]">
-        <div className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-16 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-20">
-          <div>
-            <h2 className="text-[34px] font-extrabold leading-tight">
-              Further Services
-            </h2>
-            <p className="mt-6 max-w-[760px] text-[17px] leading-relaxed text-[#3a3a3a] sm:text-[18px]">
-              Our experience has allowed us to broaden the range of Samsung
-              repair services we offer, including data recovery, motherboard
-              repairs, and liquid damage restoration.
-            </p>
-          </div>
-          <img
-            src="/imgi_10_about-further-1200x1200-1.jpg"
-            alt="Samsung phone components"
-            className="mx-auto max-h-[420px] w-full object-contain"
-          />
-        </div>
-      </section>
+      <FurtherServices
+        alt="Additional Samsung repair services"
+        text="Our experience has allowed us to broaden the range of Samsung repair services we offer, including data recovery, motherboard repairs, and liquid damage restoration."
+      />
 
       <section className="mx-auto max-w-[1720px] px-6 py-16 text-center sm:px-10 lg:px-20 lg:py-20">
         <h2 className="text-[38px] font-extrabold leading-tight sm:text-[48px]">

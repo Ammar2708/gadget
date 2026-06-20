@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { Link, useLocation, useOutletContext } from "react-router-dom";
 import {
+  FaCheckCircle,
+  FaExclamationTriangle,
   FaMinus,
+  FaPaypal,
   FaPlus,
   FaRegCreditCard,
-  FaShieldAlt,
+  FaReceipt,
   FaShoppingBag,
+  FaTruck,
   FaTrash,
+  FaUniversity,
 } from "react-icons/fa";
 
 const currencyFormatter = new Intl.NumberFormat("en-GB", {
@@ -15,6 +21,40 @@ const currencyFormatter = new Intl.NumberFormat("en-GB", {
 
 const inputClass =
   "h-14 w-full border border-neutral-200 bg-white px-5 text-[15px] text-[#171a23] outline-none transition-colors duration-200 placeholder:text-neutral-500 focus:border-[#fb5c1c]";
+
+const paymentMethods = [
+  {
+    id: "trustly",
+    name: "Trustly",
+    icon: FaUniversity,
+    cta: "Pay with Trustly",
+    description: "Pay directly from your bank account.",
+  },
+  {
+    id: "paypal",
+    name: "PayPal",
+    icon: FaPaypal,
+    cta: "Pay with PayPal",
+    description: "Use your PayPal wallet or saved card.",
+  },
+  {
+    id: "kustom",
+    name: "Kustom Checkout",
+    icon: FaReceipt,
+    cta: "Continue with Kustom Checkout",
+    description: "Complete payment through Kustom Checkout.",
+    badge: "Kustom",
+  },
+  {
+    id: "klarna",
+    name: "Klarna",
+    icon: FaRegCreditCard,
+    cta: "Pay with Klarna",
+    description: "Pay now or use available Klarna payment plans.",
+    badge: "Klarna",
+    badgeClass: "bg-[#ffb3d1] text-[#171a23]",
+  },
+];
 
 const getStoredBooking = () => {
   try {
@@ -42,6 +82,76 @@ const Checkout = () => {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const hasItems = cartItems.length > 0;
   const booking = location.state?.booking || getStoredBooking();
+  const [selectedPayment, setSelectedPayment] = useState("klarna");
+  const [showOrderNote, setShowOrderNote] = useState(false);
+  const [orderNote, setOrderNote] = useState("");
+  const [checkoutStatus, setCheckoutStatus] = useState({
+    type: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const activePayment =
+    paymentMethods.find((method) => method.id === selectedPayment) ||
+    paymentMethods[0];
+
+  const handleCheckoutSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!hasItems || isSubmitting) {
+      return;
+    }
+
+    const formData = new FormData(event.currentTarget);
+    const customer = Object.fromEntries(formData.entries());
+
+    setIsSubmitting(true);
+    setCheckoutStatus({ type: "", message: "" });
+
+    try {
+      const response = await fetch("/api/checkout/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          customer,
+          paymentMethod: selectedPayment,
+          shippingMethod: "free-shipping",
+          orderNote: showOrderNote ? orderNote : "",
+          items: cartItems,
+          totals: {
+            subtotal,
+            shipping: 0,
+            total: subtotal,
+            currency: "GBP",
+          },
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Unable to create checkout order.");
+      }
+
+      setCheckoutStatus({
+        type: "success",
+        message:
+          result.message ||
+          `Order ${result.orderId} is ready for ${activePayment.name}.`,
+      });
+    } catch (error) {
+      setCheckoutStatus({
+        type: "error",
+        message:
+          error.message ||
+          "Checkout could not be started. Please try again in a moment.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   if (booking?.productName && Array.isArray(booking.issues)) {
     return (
@@ -192,54 +302,208 @@ const Checkout = () => {
             </Link>
           </div>
 
-          <form className="mt-10 grid gap-8">
+          <form className="mt-10 grid gap-8" onSubmit={handleCheckoutSubmit}>
             <div className="grid gap-8 md:grid-cols-2">
-              <input className={inputClass} type="text" placeholder="First name" />
-              <input className={inputClass} type="text" placeholder="Last name" />
+              <input
+                className={inputClass}
+                name="firstName"
+                type="text"
+                placeholder="First name"
+                required
+              />
+              <input
+                className={inputClass}
+                name="lastName"
+                type="text"
+                placeholder="Last name"
+                required
+              />
             </div>
 
             <div className="grid gap-8 md:grid-cols-2">
-              <input className={inputClass} type="email" placeholder="Email address" />
-              <input className={inputClass} type="tel" placeholder="Phone number" />
+              <input
+                className={inputClass}
+                name="email"
+                type="email"
+                placeholder="Email address"
+                required
+              />
+              <input
+                className={inputClass}
+                name="phone"
+                type="tel"
+                placeholder="Phone number"
+                required
+              />
             </div>
 
-            <input className={inputClass} type="text" placeholder="Address" />
-
-            <div className="grid gap-8 md:grid-cols-3">
-              <input className={inputClass} type="text" placeholder="Town / City" />
-              <input className={inputClass} type="text" placeholder="Postcode" />
-              <input className={inputClass} type="text" placeholder="Country" />
-            </div>
-
-            <textarea
-              className="min-h-[170px] w-full resize-none border border-neutral-200 bg-white px-5 py-5 text-[15px] text-[#171a23] outline-none transition-colors duration-200 placeholder:text-neutral-500 focus:border-[#fb5c1c]"
-              placeholder="Order notes"
+            <input
+              className={inputClass}
+              name="address"
+              type="text"
+              placeholder="Address"
+              required
             />
 
-            <div className="grid gap-4 bg-[#f6f7f8] p-5 sm:p-6">
-              <div className="flex items-center gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fff0ea] text-[#fb6433]">
-                  <FaShieldAlt aria-hidden="true" />
+            <div className="grid gap-8 md:grid-cols-3">
+              <input
+                className={inputClass}
+                name="city"
+                type="text"
+                placeholder="Town / City"
+                required
+              />
+              <input
+                className={inputClass}
+                name="postcode"
+                type="text"
+                placeholder="Postcode"
+                required
+              />
+              <input
+                className={inputClass}
+                name="country"
+                type="text"
+                placeholder="Country"
+                defaultValue="United Kingdom"
+                required
+              />
+            </div>
+
+            <div>
+              <h3 className="text-[26px] font-extrabold leading-tight">
+                Shipping options
+              </h3>
+              <label className="mt-6 flex min-h-[76px] cursor-pointer items-center justify-between gap-4 border-2 border-[#343943] bg-white px-5 py-4 text-[17px] font-extrabold">
+                <span className="flex items-center gap-4">
+                  <input
+                    className="h-5 w-5 accent-black"
+                    type="radio"
+                    name="shippingMethod"
+                    value="free-shipping"
+                    defaultChecked
+                  />
+                  <FaTruck className="text-[#fb6433]" aria-hidden="true" />
+                  Free shipping
                 </span>
-                <div>
-                  <h3 className="text-[18px] font-extrabold leading-tight">
-                    Payment confirmation
-                  </h3>
-                  <p className="mt-1 text-[14px] leading-relaxed text-[#5c6370]">
-                    Online payment is not active yet. Submitting the order will
-                    send your basket details to the Repair My Gadget team.
-                  </p>
-                </div>
+                <span>FREE</span>
+              </label>
+            </div>
+
+            <div>
+              <h3 className="text-[26px] font-extrabold leading-tight">
+                Payment options
+              </h3>
+              <div className="mt-6 overflow-hidden border border-neutral-200 bg-white">
+                {paymentMethods.map((method) => {
+                  const Icon = method.icon;
+                  const isSelected = selectedPayment === method.id;
+
+                  return (
+                    <label
+                      key={method.id}
+                      className={`flex min-h-[74px] cursor-pointer items-center justify-between gap-4 border-b border-neutral-200 px-5 py-4 transition-colors duration-200 last:border-b-0 ${
+                        isSelected
+                          ? "border-2 border-[#343943] bg-white"
+                          : "hover:bg-[#fafafa]"
+                      }`}
+                    >
+                      <span className="flex min-w-0 items-center gap-4">
+                        <input
+                          className="h-5 w-5 shrink-0 accent-black"
+                          type="radio"
+                          name="paymentMethod"
+                          value={method.id}
+                          checked={isSelected}
+                          onChange={() => setSelectedPayment(method.id)}
+                        />
+                        <span className="flex min-w-0 flex-wrap items-center gap-3">
+                          {method.badge ? (
+                            <span
+                              className={`inline-flex min-h-9 items-center rounded-md px-3 text-[18px] font-black ${
+                                method.badgeClass ||
+                                "bg-[#edff2c] text-[#171a23]"
+                              }`}
+                            >
+                              {method.badge}
+                            </span>
+                          ) : (
+                            <Icon
+                              className="text-[22px] text-[#fb6433]"
+                              aria-hidden="true"
+                            />
+                          )}
+                          <span className="text-[17px] font-extrabold">
+                            {method.name}
+                          </span>
+                        </span>
+                      </span>
+                      <span className="hidden text-right text-[13px] font-semibold text-[#6c7280] sm:block">
+                        {method.description}
+                      </span>
+                    </label>
+                  );
+                })}
               </div>
             </div>
 
+            <label className="flex cursor-pointer items-center gap-4 text-[17px] font-extrabold">
+              <input
+                className="h-6 w-6 rounded border-neutral-300 accent-black"
+                type="checkbox"
+                checked={showOrderNote}
+                onChange={(event) => setShowOrderNote(event.target.checked)}
+              />
+              Add a note to your order
+            </label>
+
+            {showOrderNote && (
+              <textarea
+                className="min-h-[150px] w-full resize-none border border-neutral-200 bg-white px-5 py-5 text-[15px] text-[#171a23] outline-none transition-colors duration-200 placeholder:text-neutral-500 focus:border-[#fb5c1c]"
+                placeholder="Order notes"
+                value={orderNote}
+                onChange={(event) => setOrderNote(event.target.value)}
+              />
+            )}
+
+            <div className="border-t border-neutral-200 pt-7 text-[15px] leading-relaxed text-[#171a23]">
+              By proceeding with your purchase you agree to our{" "}
+              <Link
+                to="/terms-and-conditions"
+                className="font-bold text-[#fb6433] hover:text-[#df4a10]"
+              >
+                Terms and Conditions
+              </Link>{" "}
+              and Privacy Policy.
+            </div>
+
+            {checkoutStatus.message && (
+              <div
+                className={`flex items-start gap-3 border px-4 py-3 text-[14px] font-semibold ${
+                  checkoutStatus.type === "success"
+                    ? "border-green-200 bg-green-50 text-green-800"
+                    : "border-red-200 bg-red-50 text-red-800"
+                }`}
+              >
+                {checkoutStatus.type === "success" ? (
+                  <FaCheckCircle className="mt-0.5 shrink-0" aria-hidden="true" />
+                ) : (
+                  <FaExclamationTriangle
+                    className="mt-0.5 shrink-0"
+                    aria-hidden="true"
+                  />
+                )}
+                <span>{checkoutStatus.message}</span>
+              </div>
+            )}
+
             <button
-              type="button"
+              type="submit"
               className="inline-flex h-14 w-full items-center justify-center gap-3 bg-[#fb6433] px-8 text-[14px] font-extrabold uppercase tracking-[0.14em] text-white transition-colors duration-200 hover:bg-[#df4a10] disabled:cursor-not-allowed disabled:bg-[#ffd8ca] disabled:text-[#b78373] sm:w-fit"
-              disabled={!hasItems}
+              disabled={!hasItems || isSubmitting}
             >
               <FaRegCreditCard aria-hidden="true" />
-              Place order
+              {isSubmitting ? "Creating order..." : activePayment.cta}
             </button>
           </form>
         </div>
@@ -352,6 +616,16 @@ const Checkout = () => {
               <div className="mt-3 flex items-center justify-between gap-4 text-[14px] font-bold text-[#5c6370]">
                 <span>Subtotal</span>
                 <span>{currencyFormatter.format(subtotal)}</span>
+              </div>
+              <div className="mt-3 flex items-center justify-between gap-4 text-[14px] font-bold text-[#5c6370]">
+                <span>Free shipping</span>
+                <span className="text-[#171a23]">FREE</span>
+              </div>
+              <div className="mt-3 flex items-center justify-between gap-4 text-[14px] font-bold text-[#5c6370]">
+                <span>Payment</span>
+                <span className="text-right text-[#171a23]">
+                  {activePayment.name}
+                </span>
               </div>
               <div className="mt-4 flex items-center justify-between gap-4 border-t border-neutral-200 pt-4">
                 <span className="text-[16px] font-extrabold uppercase tracking-[0.12em]">

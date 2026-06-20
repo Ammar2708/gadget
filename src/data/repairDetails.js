@@ -254,6 +254,137 @@ const ipodNanoModels = [
 const ipodDetailIntro = (title) =>
   `Choose repair services for your ${title}, including screen, battery, charging, button and audio faults.`;
 
+const iphoneDetailIntro = (title) =>
+  `Choose repair services for your ${title}, including screen, battery, charging, camera and speaker faults.`;
+
+const additionalIphoneModels = [
+  {
+    title: "iPhone 17 Pro Max",
+    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+    detailSlug: "iphone-17-pro-max-repairs",
+  },
+  {
+    title: "iPhone 17 Pro",
+    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+    detailSlug: "iphone-17-pro-repairs",
+  },
+  {
+    title: "iPhone 17",
+    image: "/imgi_39_IMG-18071437_m_jpeg_1.webp",
+    detailSlug: "iphone-17-repairs",
+  },
+  {
+    title: "iPhone Air",
+    image: "/imgi_41_iPhone_17_Air_SpaceBlack_Grid_394ec352-dd77-4290-9e0f-3d7974b6f5f3.webp",
+    detailSlug: "iphone-air-repairs",
+  },
+  {
+    title: "iPhone 16 Pro Max",
+    image: "/imgi_107_iPhone12ProMaxGraphile_1800x.webp",
+    detailSlug: "iphone-16-pro-max-repairs",
+  },
+  {
+    title: "iPhone 16 Pro",
+    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+    detailSlug: "iphone-16-pro-repairs",
+  },
+  {
+    title: "iPhone 16",
+    image: "/imgi_41_iPhone_17_Air_SpaceBlack_Grid_394ec352-dd77-4290-9e0f-3d7974b6f5f3.webp",
+    detailSlug: "iphone-16-repairs",
+  },
+  {
+    title: "iPhone 15 Pro Max",
+    image: "/imgi_107_iPhone12ProMaxGraphile_1800x.webp",
+    detailSlug: "iphone-15-pro-max-repairs",
+  },
+  {
+    title: "iPhone 15 Pro",
+    image: "/imgi_101_iPhone12ProMaxGraphile_1800x-1536x1536.webp",
+    detailSlug: "iphone-15-pro-repairs",
+  },
+  {
+    title: "iPhone 15",
+    image: "/imgi_39_IMG-18071437_m_jpeg_1.webp",
+    detailSlug: "iphone-15-repairs",
+  },
+  {
+    title: "iPhone 12 mini",
+    image: "/imgi_2_iphone.webp",
+    detailSlug: "iphone-12-mini-repairs",
+  },
+  {
+    title: "iPhone 11",
+    image: "/imgi_260_249852_0_snn6go-2048x2048.webp",
+    detailSlug: "iphone-11-repairs",
+  },
+  {
+    title: "iPhone XS Max",
+    image: "/imgi_2_iphone.webp",
+    detailSlug: "iphone-xs-max-repairs",
+  },
+  {
+    title: "iPhone XS",
+    image: "/imgi_2_iphone.webp",
+    detailSlug: "iphone-xs-repairs",
+  },
+  {
+    title: "iPhone XR",
+    image: "/imgi_260_249852_0_snn6go-2048x2048.webp",
+    detailSlug: "iphone-xr-repairs",
+  },
+  {
+    title: "iPhone SE (2nd Generation)",
+    image: "/imgi_270_iPhone_SE3_Starlight_PDP_Image_Position-1A__en-US_5eeddc15-3457-4154-ad71-fea2ea8bbd74-2048x2048.webp",
+    detailSlug: "iphone-se-2nd-generation-repairs",
+  },
+  {
+    title: "iPhone SE (1st Generation)",
+    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    detailSlug: "iphone-se-1st-generation-repairs",
+  },
+  {
+    title: "iPhone 8 Plus",
+    image: "/imgi_240_apple-iphone-7-black.webp",
+    detailSlug: "iphone-8-plus-repairs",
+  },
+  {
+    title: "iPhone 8",
+    image: "/imgi_240_apple-iphone-7-black.webp",
+    detailSlug: "iphone-8-repairs",
+  },
+  {
+    title: "iPhone 7 Plus",
+    image: "/imgi_240_apple-iphone-7-black.webp",
+    detailSlug: "iphone-7-plus-repairs",
+  },
+  {
+    title: "iPhone 7",
+    image: "/imgi_240_apple-iphone-7-black.webp",
+    detailSlug: "iphone-7-repairs",
+  },
+  {
+    title: "iPhone 6S Plus",
+    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    detailSlug: "iphone-6s-plus-repairs",
+  },
+  {
+    title: "iPhone 6S",
+    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    detailSlug: "iphone-6s-repairs",
+  },
+  {
+    title: "iPhone 6 Plus",
+    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    detailSlug: "iphone-6-plus-repairs",
+  },
+  {
+    title: "iPhone 6",
+    image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp",
+    detailSlug: "iphone-6-repairs",
+  },
+];
+
 export const repairDetails = {
   "iphone-14-pro-max-repairs": {
     category: "iphone",
@@ -339,6 +470,17 @@ export const repairDetails = {
     intro:
       "Select the repair your iPhone SE needs and we will confirm parts and pricing before work begins.",
   },
+  ...Object.fromEntries(
+    additionalIphoneModels.map((model) => [
+      model.detailSlug,
+      {
+        category: "iphone",
+        title: model.title,
+        image: model.image,
+        intro: iphoneDetailIntro(model.title),
+      },
+    ]),
+  ),
   "galaxy-flip-fold-series-repairs": {
     category: "samsung",
     title: "Galaxy Flip & Fold series",

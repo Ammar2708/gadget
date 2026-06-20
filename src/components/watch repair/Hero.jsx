@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaLock, FaRegThumbsUp, FaSearch } from "react-icons/fa";
+import FurtherServices from "../FurtherServices";
 import { toRepairSlug } from "../../data/repairDetails";
 
 const watchModels = [
@@ -178,23 +179,10 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-16 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-20">
-        <div>
-          <h2 className="text-[34px] font-extrabold leading-tight">
-            Further Services
-          </h2>
-          <p className="mt-6 max-w-[760px] text-[17px] leading-relaxed text-[#3a3a3a] sm:text-[18px]">
-            We can help with charging faults, button issues, software-related
-            problems and water exposure checks. Our aim is to diagnose the actual
-            issue before recommending parts.
-          </p>
-        </div>
-        <img
-          src="/additional-services-camera-full.png"
-          alt="Additional device repair services"
-          className="h-[260px] w-full bg-white object-contain sm:h-[330px]"
-        />
-      </section>
+      <FurtherServices
+        alt="Additional Apple Watch repair services"
+        text="We can help with charging faults, button issues, software-related problems and water exposure checks. Our aim is to diagnose the actual issue before recommending parts."
+      />
 
       <section className="bg-[#f2f2f2]">
         <div className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-16 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-20">

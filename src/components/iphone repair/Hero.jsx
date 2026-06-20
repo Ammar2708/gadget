@@ -1,20 +1,49 @@
 import { Link } from "react-router-dom";
 import { FaLock, FaRegThumbsUp, FaSearch } from "react-icons/fa";
+import FurtherServices from "../FurtherServices";
 import { toRepairSlug } from "../../data/repairDetails";
 
 const iphoneModels = [
-  { title: "iPhone 14 Pro Max", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 14 Pro", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 14 Plus", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 14", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 13 mini", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 12 Pro Max", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 12 Pro", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 12", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 11 Pro Max", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone 11 Pro", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone X", image: "/imgi_2_iphone.webp" },
-  { title: "iPhone SE", image: "/imgi_2_iphone.webp" },
+  {
+    title: "iPhone 17 Pro Max",
+    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+  },
+  { title: "iPhone 17 Pro", image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp" },
+  { title: "iPhone 17", image: "/imgi_39_IMG-18071437_m_jpeg_1.webp" },
+  { title: "iPhone Air", image: "/imgi_41_iPhone_17_Air_SpaceBlack_Grid_394ec352-dd77-4290-9e0f-3d7974b6f5f3.webp" },
+  { title: "iPhone 16 Pro Max", image: "/imgi_107_iPhone12ProMaxGraphile_1800x.webp" },
+  { title: "iPhone 16 Pro", image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp" },
+  { title: "iPhone 16", image: "/imgi_41_iPhone_17_Air_SpaceBlack_Grid_394ec352-dd77-4290-9e0f-3d7974b6f5f3.webp" },
+  { title: "iPhone 15 Pro Max", image: "/imgi_107_iPhone12ProMaxGraphile_1800x.webp" },
+  { title: "iPhone 15 Pro", image: "/imgi_101_iPhone12ProMaxGraphile_1800x-1536x1536.webp" },
+  { title: "iPhone 15", image: "/imgi_39_IMG-18071437_m_jpeg_1.webp" },
+  { title: "iPhone 14 Pro Max", image: "/img1.png" },
+  { title: "iPhone 14 Pro", image: "/img2.png" },
+  { title: "iPhone 14 Plus", image: "/img3.png" },
+  { title: "iPhone 14", image: "/img4.png" },
+  { title: "iPhone 13 mini", image: "/img5.png" },
+  { title: "iPhone 12 Pro Max", image: "/img6.png" },
+  { title: "iPhone 12 Pro", image: "/img7.png" },
+  { title: "iPhone 12", image: "/img8.png" },
+  { title: "iPhone 12 mini", image: "/img8.png" },
+  { title: "iPhone 11 Pro Max", image: "/img9.png" },
+  { title: "iPhone 11 Pro", image: "/img10.png" },
+  { title: "iPhone 11", image: "/imgi_260_249852_0_snn6go-2048x2048.webp" },
+  { title: "iPhone XS Max", image: "/img11.png" },
+  { title: "iPhone XS", image: "/img11.png" },
+  { title: "iPhone XR", image: "/imgi_260_249852_0_snn6go-2048x2048.webp" },
+  { title: "iPhone X", image: "/img11.png" },
+  { title: "iPhone SE", image: "/img12.png" },
+  { title: "iPhone SE (2nd Generation)", image: "/imgi_270_iPhone_SE3_Starlight_PDP_Image_Position-1A__en-US_5eeddc15-3457-4154-ad71-fea2ea8bbd74-2048x2048.webp" },
+  { title: "iPhone SE (1st Generation)", image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp" },
+  { title: "iPhone 8 Plus", image: "/imgi_240_apple-iphone-7-black.webp" },
+  { title: "iPhone 8", image: "/imgi_240_apple-iphone-7-black.webp" },
+  { title: "iPhone 7 Plus", image: "/imgi_240_apple-iphone-7-black.webp" },
+  { title: "iPhone 7", image: "/imgi_240_apple-iphone-7-black.webp" },
+  { title: "iPhone 6S Plus", image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp" },
+  { title: "iPhone 6S", image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp" },
+  { title: "iPhone 6 Plus", image: "/imgi_225_iphone6-gray-1_ec79ea99-6789-4c09-9afc-a929933583ef.webp" },
+  { title: "iPhone 6", image: "/img14.png" },
 ];
 
 const benefits = [
@@ -179,23 +208,10 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-14 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-16">
-        <div>
-          <h2 className="text-[30px] font-extrabold leading-tight">
-            Further Services
-          </h2>
-          <p className="mt-5 max-w-[760px] text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">
-            We also help with charging ports, speakers, cameras, back glass,
-            data recovery, liquid damage inspections and board-level faults
-            where practical.
-          </p>
-        </div>
-        <img
-          src="/additional-services-camera-full.png"
-          alt="Additional iPhone repair services"
-          className="h-[250px] w-full bg-white object-contain sm:h-[320px]"
-        />
-      </section>
+      <FurtherServices
+        alt="Additional iPhone repair services"
+        text="We also help with charging ports, speakers, cameras, back glass, data recovery, liquid damage inspections and board-level faults where practical."
+      />
 
       <section className="bg-[#f2f2f2]">
         <div className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-14 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-16">

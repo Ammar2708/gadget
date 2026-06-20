@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaLock, FaRegThumbsUp, FaSearch } from "react-icons/fa";
+import FurtherServices from "../FurtherServices";
 import { toRepairSlug } from "../../data/repairDetails";
 
 const ipadModels = [
@@ -184,23 +185,10 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-14 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-16">
-        <div>
-          <h2 className="text-[30px] font-extrabold leading-tight">
-            Further Services
-          </h2>
-          <p className="mt-5 max-w-[760px] text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">
-            We also help with charging ports, speakers, cameras, buttons,
-            software checks, liquid damage inspections and board-level faults
-            where practical.
-          </p>
-        </div>
-        <img
-          src="/additional-services-camera-full.png"
-          alt="Additional iPad repair services"
-          className="h-[250px] w-full bg-white object-contain sm:h-[320px]"
-        />
-      </section>
+      <FurtherServices
+        alt="Additional iPad repair services"
+        text="We also help with charging ports, speakers, cameras, buttons, software checks, liquid damage inspections and board-level faults where practical."
+      />
 
       <section className="bg-[#f2f2f2]">
         <div className="mx-auto grid max-w-[1720px] items-center gap-12 px-6 py-14 sm:px-10 lg:grid-cols-2 lg:px-20 lg:py-16">
