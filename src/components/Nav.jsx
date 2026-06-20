@@ -28,6 +28,7 @@ const navItems = [
 
 const Nav = ({ cartCount = 0, onCartOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDesktopDropdown, setOpenDesktopDropdown] = useState("");
   const [openMobileDropdown, setOpenMobileDropdown] = useState("");
 
   const linkClass = ({ isActive }) =>
@@ -66,26 +67,47 @@ const Nav = ({ cartCount = 0, onCartOpen }) => {
         <div className="hidden flex-1 items-center justify-center gap-6 px-8 xl:flex 2xl:gap-8">
           {navItems.map((item) =>
             item.children ? (
-              <div key={item.label} className="group relative">
+              <div
+                key={item.label}
+                className="group relative"
+                onMouseEnter={() => setOpenDesktopDropdown(item.label)}
+                onMouseLeave={() => setOpenDesktopDropdown("")}
+              >
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
                     `${linkClass({ isActive })} flex items-center gap-1.5`
                   }
+                  aria-expanded={openDesktopDropdown === item.label}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setOpenDesktopDropdown((open) =>
+                      open === item.label ? "" : item.label
+                    );
+                  }}
                 >
                   <span>{item.label}</span>
                   <FaChevronDown
-                    className="mt-0.5 text-[10px] transition-transform duration-200 group-hover:rotate-180"
+                    className={`mt-0.5 text-[10px] transition-transform duration-200 group-hover:rotate-180 ${
+                      openDesktopDropdown === item.label ? "rotate-180" : ""
+                    }`}
                     aria-hidden="true"
                   />
                 </NavLink>
 
-                <div className="invisible absolute left-1/2 top-full z-50 mt-5 w-[300px] -translate-x-1/2 overflow-hidden rounded-sm border border-neutral-100 bg-white opacity-0 shadow-[0_18px_45px_rgba(15,23,42,0.14)] transition-all duration-200 group-hover:visible group-hover:mt-3 group-hover:opacity-100 group-focus-within:visible group-focus-within:mt-3 group-focus-within:opacity-100">
+                <div
+                  className={`absolute left-1/2 top-full z-50 w-[300px] -translate-x-1/2 overflow-hidden rounded-sm border border-neutral-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)] transition-all duration-200 group-hover:visible group-hover:mt-3 group-hover:opacity-100 group-focus-within:visible group-focus-within:mt-3 group-focus-within:opacity-100 ${
+                    openDesktopDropdown === item.label
+                      ? "visible mt-3 opacity-100"
+                      : "invisible mt-5 opacity-0"
+                  }`}
+                >
                   {item.children.map((child) => (
                     <Link
                       key={child.label}
                       to={child.path}
                       className="block border-b border-neutral-100 bg-[#f7f7f7] px-7 py-5 text-[17px] font-medium text-neutral-600 transition-colors duration-200 last:border-b-0 hover:bg-white hover:text-orange-500"
+                      onClick={() => setOpenDesktopDropdown("")}
                     >
                       {child.label}
                     </Link>

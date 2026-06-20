@@ -1,4 +1,4 @@
-const galaxySModels = [
+﻿const galaxySModels = [
   {
     title: "Samsung Galaxy S24",
     image: "/imgi_2_Samsung Galaxy S24.webp",
@@ -1602,57 +1602,57 @@ export const iphoneRepairOptions = [
   {
     title: "Display Assembly",
     description: "Replacement OLED display assembly to repair a damaged screen.",
-    price: "GBP 149",
+    price: "£149",
   },
   {
     title: "Display & Rear",
     description: "OLED display assembly and rear housing replacement.",
-    price: "GBP 239",
+    price: "£239",
   },
   {
     title: "Battery",
     description: "Replacement battery to restore your device performance.",
-    price: "GBP 79",
+    price: "£79",
   },
   {
     title: "Charging Port",
     description: "Replacement lightning port if your iPhone will not charge.",
-    price: "GBP 89",
+    price: "£89",
   },
   {
     title: "Rear Camera",
     description: "Replacement rear camera for camera faults or damage.",
-    price: "GBP 109",
+    price: "£109",
   },
   {
     title: "Camera Lens",
     description: "Replacement camera lens if one of yours is damaged.",
-    price: "GBP 39",
+    price: "£39",
   },
   {
     title: "Earpiece Speaker",
     description: "Replacement speaker if you cannot hear on phone calls.",
-    price: "GBP 69",
+    price: "£69",
   },
   {
     title: "Loudspeaker",
     description: "Replacement loudspeaker if you cannot hear any audio.",
-    price: "GBP 69",
+    price: "£69",
   },
   {
     title: "Microphone",
     description: "A new microphone to restore sound pickup.",
-    price: "GBP 89",
+    price: "£89",
   },
   {
     title: "Rear Housing",
     description: "Replacement rear housing including back glass.",
-    price: "GBP 199",
+    price: "£199",
   },
   {
     title: "Premium Screen Replacement (OLED)",
     description: "A high-quality OLED screen replacement for a broken display.",
-    price: "GBP 139",
+    price: "£139",
   },
 ];
 
@@ -1660,42 +1660,42 @@ export const samsungRepairOptions = [
   {
     title: "Screen Replacement",
     description: "Replacement Samsung display for cracked or unresponsive screens.",
-    price: "GBP 119",
+    price: "£119",
   },
   {
     title: "Battery",
     description: "Replacement battery for weak battery life or sudden shutdowns.",
-    price: "GBP 69",
+    price: "£69",
   },
   {
     title: "Charging Port",
     description: "Charging port replacement if your Samsung phone will not charge.",
-    price: "GBP 79",
+    price: "£79",
   },
   {
     title: "Rear Camera",
     description: "Replacement rear camera for blurry images or damaged camera units.",
-    price: "GBP 99",
+    price: "£99",
   },
   {
     title: "Camera Lens",
     description: "Replacement camera glass if the lens is cracked or scratched.",
-    price: "GBP 39",
+    price: "£39",
   },
   {
     title: "Loudspeaker",
     description: "Speaker replacement for low, distorted or missing audio.",
-    price: "GBP 65",
+    price: "£65",
   },
   {
     title: "Microphone",
     description: "Microphone replacement for call or recording sound faults.",
-    price: "GBP 75",
+    price: "£75",
   },
   {
     title: "Rear Housing",
     description: "Rear housing and back glass repair for damaged Samsung phones.",
-    price: "GBP 149",
+    price: "£149",
   },
 ];
 
@@ -1703,32 +1703,32 @@ export const ipadRepairOptions = [
   {
     title: "Glass Replacement",
     description: "Replacement front glass for cracked iPad screens where the display still works.",
-    price: "GBP 89",
+    price: "£89",
   },
   {
     title: "Display Assembly",
     description: "Replacement display assembly for damaged screens or display faults.",
-    price: "GBP 139",
+    price: "£139",
   },
   {
     title: "Battery",
     description: "Replacement battery for poor battery life or charging instability.",
-    price: "GBP 95",
+    price: "£95",
   },
   {
     title: "Charging Port",
     description: "Charging port repair if your iPad will not charge reliably.",
-    price: "GBP 89",
+    price: "£89",
   },
   {
     title: "Home Button",
     description: "Home button replacement or repair for button response issues.",
-    price: "GBP 59",
+    price: "£59",
   },
   {
     title: "Speaker",
     description: "Speaker repair for distorted, low or missing sound.",
-    price: "GBP 69",
+    price: "£69",
   },
 ];
 
@@ -1736,32 +1736,32 @@ export const watchRepairOptions = [
   {
     title: "Screen Replacement",
     description: "Replacement Apple Watch display for cracked or unresponsive screens.",
-    price: "GBP 99",
+    price: "£99",
   },
   {
     title: "Battery",
     description: "Battery replacement for poor battery life or shutdown issues.",
-    price: "GBP 69",
+    price: "£69",
   },
   {
     title: "Charging Fault",
     description: "Inspection and repair for Apple Watch charging issues.",
-    price: "GBP 59",
+    price: "£59",
   },
   {
     title: "Digital Crown",
     description: "Repair for sticky, damaged or unresponsive crown controls.",
-    price: "GBP 75",
+    price: "£75",
   },
   {
     title: "Side Button",
     description: "Side button repair for response or mechanical faults.",
-    price: "GBP 65",
+    price: "£65",
   },
   {
     title: "Diagnostics",
     description: "Fault inspection for software, pairing or sensor-related issues.",
-    price: "GBP 29",
+    price: "£29",
   },
 ];
 
@@ -1769,32 +1769,32 @@ export const macRepairOptions = [
   {
     title: "Display Assembly",
     description: "Mac display replacement for cracked, flickering or faulty screens.",
-    price: "GBP 189",
+    price: "£189",
   },
   {
     title: "Battery",
     description: "Battery replacement for service warnings, swelling or poor battery life.",
-    price: "GBP 129",
+    price: "£129",
   },
   {
     title: "Keyboard",
     description: "Keyboard repair for stuck, missing or unresponsive keys.",
-    price: "GBP 119",
+    price: "£119",
   },
   {
     title: "Charging Port",
     description: "Charging port or power fault repair for Macs that will not charge.",
-    price: "GBP 99",
+    price: "£99",
   },
   {
     title: "Storage Service",
     description: "Storage diagnostics, replacement or upgrade where supported.",
-    price: "GBP 89",
+    price: "£89",
   },
   {
     title: "Logic Board",
     description: "Board-level inspection for power, liquid damage or performance faults.",
-    price: "GBP 149",
+    price: "£149",
   },
 ];
 
@@ -1802,32 +1802,32 @@ export const ipodRepairOptions = [
   {
     title: "Screen Replacement",
     description: "Replacement display or glass service for cracked or faulty iPod screens.",
-    price: "GBP 69",
+    price: "£69",
   },
   {
     title: "Battery",
     description: "Replacement battery for poor battery life, shutdowns or charging instability.",
-    price: "GBP 49",
+    price: "£49",
   },
   {
     title: "Charging Port",
     description: "Charging port repair if your iPod will not charge or connect reliably.",
-    price: "GBP 59",
+    price: "£59",
   },
   {
     title: "Home Button",
     description: "Home button repair for weak, stuck or unresponsive button behavior.",
-    price: "GBP 45",
+    price: "£45",
   },
   {
     title: "Headphone Socket",
     description: "Audio socket repair for crackling sound, loose connection or no output.",
-    price: "GBP 49",
+    price: "£49",
   },
   {
     title: "Diagnostics",
     description: "Inspection for software, audio, charging or power faults before repair.",
-    price: "GBP 29",
+    price: "£29",
   },
 ];
 

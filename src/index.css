@@ -35,6 +35,16 @@
   }
 }
 
+@layer components {
+  .rmg-model-card h3 {
+    margin-top: 1rem;
+    font-size: 1.125rem !important;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #050505;
+  }
+}
+
 @media (max-width: 639px) {
   section,
   footer > div,

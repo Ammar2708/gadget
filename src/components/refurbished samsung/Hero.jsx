@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import {
   FaBoxOpen,
@@ -12,55 +12,55 @@ import {
 const products = [
   {
     name: "Samsung S24",
-    price: "GBP 549.00",
+    price: "£549.00",
     image: "/imgi_6_samsung-unpacked-2023-s23-4.webp",
     detail: "Current Galaxy performance with a clean body and tested battery.",
   },
   {
     name: "Samsung S23",
-    price: "GBP 399.00",
+    price: "£399.00",
     image: "/imgi_3_Galaxy S series-1280x1280.webp",
     detail: "A polished Galaxy S model with strong camera and display checks.",
   },
   {
     name: "Samsung S22 Ultra",
-    price: "GBP 429.00",
+    price: "£429.00",
     image: "/imgi_12_SamsungGalaxyS22Ultra5GRepair._8b261bf0-af1e-4dc2-94bd-e8a654b8bc26.webp",
     detail: "Large-screen Ultra model, checked for S Pen, camera and charging.",
   },
   {
     name: "Samsung Flip 4",
-    price: "GBP 379.00",
+    price: "£379.00",
     image: "/imgi_2_Galaxy Flip & Fold series-1280x1280.webp",
     detail: "Foldable design with hinge, screen and battery condition reviewed.",
   },
   {
     name: "Note 20 Ultra",
-    price: "GBP 599.00",
+    price: "£599.00",
     image: "/imgi_3_samsung-galaxy-note20-ultra-5g-mystic-bronze-official-image.webp",
     detail: "Premium Note series phone with display, pen and camera testing.",
   },
   {
     name: "Galaxy A Series",
-    price: "GBP 189.00",
+    price: "£189.00",
     image: "/imgi_5_Galaxy A series.webp",
     detail: "Affordable refurbished Galaxy option for dependable everyday use.",
   },
   {
     name: "Galaxy Note Series",
-    price: "GBP 249.00",
+    price: "£249.00",
     image: "/imgi_4_Galaxy Note series.webp",
     detail: "A practical large-display Samsung with all core features checked.",
   },
   {
     name: "Galaxy S Series",
-    price: "GBP 299.00",
+    price: "£299.00",
     image: "/imgi_7_samsung-repairs.webp",
     detail: "Refurbished Galaxy S performance with warranty support included.",
   },
   {
     name: "Samsung Fold Series",
-    price: "GBP 649.00",
+    price: "£649.00",
     image: "/imgi_11_7d3ea32f601b45ab833bdde8e082d746_samsungs.png",
     detail: "Premium foldable stock, inspected for hinge movement and displays.",
   },

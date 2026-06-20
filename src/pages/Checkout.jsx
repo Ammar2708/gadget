@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link, useLocation, useOutletContext } from "react-router-dom";
 import {
   FaCheckCircle,
@@ -209,7 +209,7 @@ const Checkout = () => {
                     Description: {issue.description}
                   </p>
                   <p className="mt-3 text-[18px] leading-relaxed text-[#171a23]">
-                    Price: {issue.price.replace("GBP", "£")}
+                    Price: {issue.price}
                   </p>
                 </div>
               ))}

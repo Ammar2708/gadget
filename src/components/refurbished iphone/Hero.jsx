@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import {
   FaApple,
@@ -12,56 +12,56 @@ import {
 const products = [
   {
     name: "iPhone 15 Pro",
-    price: "GBP 679.00",
-    image: "/imgi_40_iphone_17_pro_max_silver_pdp_image_position_1__en-in.webp",
+    price: "£679.00",
+    image: "/img25.png",
     detail: "Premium display, pro camera system and excellent battery health.",
   },
   {
     name: "iPhone 15",
-    price: "GBP 539.00",
-    image: "/imgi_39_IMG-18071437_m_jpeg_1.webp",
+    price: "£539.00",
+    image: "/img24.png",
     detail: "A clean everyday iPhone with modern performance and warranty.",
   },
   {
     name: "iPhone 14 Pro Max",
-    price: "GBP 499.00 - GBP 759.00",
-    image: "/imgi_107_iPhone12ProMaxGraphile_1800x.webp",
+    price: "£499.00 - £759.00",
+    image: "/img4.png",
     detail: "Large display, strong battery life and a carefully checked finish.",
   },
   {
     name: "iPhone 14",
-    price: "GBP 499.00",
-    image: "/imgi_260_249852_0_snn6go-2048x2048.webp",
+    price: "£499.00",
+    image: "/img4.png",
     detail: "Certified, tested and ready for daily use with reliable support.",
   },
   {
     name: "iPhone 13 Pro",
-    price: "GBP 439.00",
-    image: "/imgi_101_iPhone12ProMaxGraphile_1800x-1536x1536.webp",
+    price: "£439.00",
+    image: "/img34.png",
     detail: "A refined pro model with smooth performance and checked parts.",
   },
   {
     name: "iPhone 13 Mini",
-    price: "GBP 319.00",
-    image: "/imgi_7_41816-81121-Purple-iPhone-12-and-Box-xl.webp",
+    price: "£319.00",
+    image: "/img5.png",
     detail: "Compact size, sharp display and dependable refurbished quality.",
   },
   {
     name: "iPhone 12 Pro",
-    price: "GBP 349.00",
-    image: "/imgi_31_bc25a7c3b023890cc5f278cd1517cfb3eb26ea26-1280x1280.webp",
+    price: "£349.00",
+    image: "/img7.png",
     detail: "Pro feel, polished design and careful functional testing.",
   },
   {
     name: "iPhone 11 Pro Max",
-    price: "GBP 339.00 - GBP 389.00",
-    image: "/imgi_29_09cd33feecc90320d844d80f5dee9b59613d1971-1280x1280.webp",
+    price: "£339.00 - £389.00",
+    image: "/iphone11.png",
     detail: "A larger classic iPhone with reliable battery and camera checks.",
   },
   {
     name: "iPhone X",
-    price: "GBP 229.00",
-    image: "/imgi_182_b81d20882df7c9b9e603fa228-2048x2048.webp",
+    price: "£229.00",
+    image: "/img11.png",
     detail: "Affordable OLED iPhone option, tested for everyday essentials.",
   },
 ];

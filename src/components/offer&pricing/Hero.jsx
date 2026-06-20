@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { FaClock, FaShieldAlt, FaTools, FaWrench } from "react-icons/fa";
 
 const highlights = [
@@ -24,11 +24,11 @@ const services = [
     imageAlt: "Smartphone repair",
     reverse: false,
     prices: [
-      ["Replacing glass", "GBP 99.99"],
-      ["Replacing screen", "GBP 32.99"],
-      ["Changing battery", "GBP 75.90"],
-      ["Repair device", "GBP 28.00"],
-      ["Cleaning", "GBP 21.00"],
+      ["Replacing glass", "£99.99"],
+      ["Replacing screen", "£32.99"],
+      ["Changing battery", "£75.90"],
+      ["Repair device", "£28.00"],
+      ["Cleaning", "£21.00"],
     ],
   },
   {
@@ -38,11 +38,11 @@ const services = [
     imageAlt: "Tablet repair",
     reverse: true,
     prices: [
-      ["Replacing glass", "GBP 99.99"],
-      ["Replacing screen", "GBP 32.99"],
-      ["Changing battery", "GBP 75.90"],
-      ["Repair device", "GBP 28.00"],
-      ["Cleaning", "GBP 21.00"],
+      ["Replacing glass", "£99.99"],
+      ["Replacing screen", "£32.99"],
+      ["Changing battery", "£75.90"],
+      ["Repair device", "£28.00"],
+      ["Cleaning", "£21.00"],
     ],
   },
   {
@@ -52,11 +52,11 @@ const services = [
     imageAlt: "Laptop repair",
     reverse: false,
     prices: [
-      ["Replacing display", "GBP 129.99"],
-      ["Battery service", "GBP 89.00"],
-      ["Keyboard repair", "GBP 69.00"],
-      ["Software repair", "GBP 35.00"],
-      ["Deep cleaning", "GBP 24.00"],
+      ["Replacing display", "£129.99"],
+      ["Battery service", "£89.00"],
+      ["Keyboard repair", "£69.00"],
+      ["Software repair", "£35.00"],
+      ["Deep cleaning", "£24.00"],
     ],
   },
 ];
