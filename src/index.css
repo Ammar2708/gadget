@@ -36,31 +36,12 @@
 }
 
 @layer components {
-  .rmg-model-card h3,
-  .rmg-refurb-front-copy h3,
-  .rmg-refurb-front-copy p,
-  .rmg-refurb-back h3,
-  .rmg-refurb-back p:nth-of-type(3),
-  .rmg-card-title {
+  .rmg-model-card h3 {
     margin-top: 1rem;
     font-size: 1.125rem !important;
     font-weight: 800;
     line-height: 1.2;
     color: #050505;
-  }
-
-  .rmg-refurb-front-copy p,
-  .rmg-refurb-back p:nth-of-type(3) {
-    margin-top: 0.75rem;
-  }
-
-  .rmg-refurb-back h3,
-  .rmg-refurb-back p:nth-of-type(3) {
-    color: #ffffff;
-  }
-
-  .rmg-card-title {
-    color: inherit !important;
   }
 }
 
@@ -194,21 +175,16 @@
     justify-content: center !important;
     border-radius: 0.5rem;
     background: #f4f7f8;
-    padding: 1.15rem !important;
+    padding: 1rem !important;
   }
 
   .rmg-model-card img {
-    max-height: 66%;
-    max-width: 72%;
+    max-height: 76%;
+    max-width: 82%;
     object-fit: contain;
   }
 
-  .rmg-model-card h3,
-  .rmg-refurb-front-copy h3,
-  .rmg-refurb-front-copy p,
-  .rmg-refurb-back h3,
-  .rmg-refurb-back p:nth-of-type(3),
-  .rmg-card-title {
+  .rmg-model-card h3 {
     margin-top: 0.35rem !important;
     font-size: clamp(0.72rem, 3.2vw, 0.9rem) !important;
     line-height: 1.2 !important;
@@ -242,12 +218,12 @@
     min-height: 0 !important;
     border-radius: 0.5rem;
     background: #f4f7f8 !important;
-    padding: 1.15rem !important;
+    padding: 1rem !important;
   }
 
   .rmg-refurb-media img {
-    max-height: 66%;
-    max-width: 72%;
+    max-height: 78%;
+    max-width: 82%;
   }
 
   .rmg-refurb-front-copy {
@@ -256,10 +232,15 @@
 
   .rmg-refurb-front-copy h3 {
     margin: 0 !important;
+    font-size: clamp(0.72rem, 3.2vw, 0.9rem) !important;
+    line-height: 1.2 !important;
+    color: #050505;
   }
 
   .rmg-refurb-front-copy p {
     margin-top: 0.25rem !important;
+    font-size: clamp(0.68rem, 2.9vw, 0.8rem) !important;
+    line-height: 1.2 !important;
   }
 
   .rmg-refurb-hint {
@@ -272,7 +253,7 @@
 
   .rmg-refurb-back h3 {
     margin-top: 0.25rem !important;
-    color: #ffffff;
+    font-size: clamp(0.86rem, 3.8vw, 1rem) !important;
   }
 
   .rmg-refurb-back p {
@@ -288,11 +269,7 @@
 
   .rmg-refurb-back p:nth-of-type(3) {
     margin-top: 0.6rem !important;
-    color: #ffffff;
-  }
-
-  .rmg-card-title {
-    color: inherit !important;
+    font-size: clamp(0.72rem, 3vw, 0.85rem) !important;
   }
 
   .rmg-refurb-actions {

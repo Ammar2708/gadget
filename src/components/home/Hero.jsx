@@ -103,9 +103,9 @@ const Hero = () => {
 
               .home-hero-pills {
                 grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-                gap: 0.45rem !important;
-                width: min(100%, 19.25rem) !important;
-                max-width: 19.25rem !important;
+                gap: 0.35rem !important;
+                width: min(100%, 20.5rem) !important;
+                max-width: 20.5rem !important;
                 margin-top: 1.05rem !important;
                 padding-left: 0 !important;
                 padding-right: 0 !important;
@@ -114,7 +114,7 @@ const Hero = () => {
               .home-hero-pill {
                 height: 1.65rem !important;
                 min-width: 0 !important;
-                padding: 0 0.6rem !important;
+                padding: 0 0.35rem !important;
                 font-size: 0.72rem !important;
                 font-weight: 700 !important;
                 line-height: 1 !important;
@@ -197,7 +197,7 @@ const Hero = () => {
                 />
               </div>
               <div className="bg-[#171719] px-4 py-5 text-center">
-                <span className="rmg-card-title text-[18px] font-semibold text-white">
+                <span className="text-[18px] font-semibold text-white">
                   {device.title}
                 </span>
               </div>
