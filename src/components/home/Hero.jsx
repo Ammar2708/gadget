@@ -197,7 +197,7 @@ const Hero = () => {
                 />
               </div>
               <div className="bg-[#171719] px-4 py-5 text-center">
-                <span className="text-[18px] font-semibold text-white">
+                <span className="rmg-card-title text-[18px] font-semibold text-white">
                   {device.title}
                 </span>
               </div>

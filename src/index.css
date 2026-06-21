@@ -38,7 +38,10 @@
 @layer components {
   .rmg-model-card h3,
   .rmg-refurb-front-copy h3,
-  .rmg-refurb-front-copy p {
+  .rmg-refurb-front-copy p,
+  .rmg-refurb-back h3,
+  .rmg-refurb-back p:nth-of-type(3),
+  .rmg-card-title {
     margin-top: 1rem;
     font-size: 1.125rem !important;
     font-weight: 800;
@@ -46,8 +49,18 @@
     color: #050505;
   }
 
-  .rmg-refurb-front-copy p {
+  .rmg-refurb-front-copy p,
+  .rmg-refurb-back p:nth-of-type(3) {
     margin-top: 0.75rem;
+  }
+
+  .rmg-refurb-back h3,
+  .rmg-refurb-back p:nth-of-type(3) {
+    color: #ffffff;
+  }
+
+  .rmg-card-title {
+    color: inherit !important;
   }
 }
 
@@ -192,7 +205,10 @@
 
   .rmg-model-card h3,
   .rmg-refurb-front-copy h3,
-  .rmg-refurb-front-copy p {
+  .rmg-refurb-front-copy p,
+  .rmg-refurb-back h3,
+  .rmg-refurb-back p:nth-of-type(3),
+  .rmg-card-title {
     margin-top: 0.35rem !important;
     font-size: clamp(0.72rem, 3.2vw, 0.9rem) !important;
     line-height: 1.2 !important;
@@ -256,7 +272,7 @@
 
   .rmg-refurb-back h3 {
     margin-top: 0.25rem !important;
-    font-size: clamp(0.86rem, 3.8vw, 1rem) !important;
+    color: #ffffff;
   }
 
   .rmg-refurb-back p {
@@ -272,7 +288,11 @@
 
   .rmg-refurb-back p:nth-of-type(3) {
     margin-top: 0.6rem !important;
-    font-size: clamp(0.72rem, 3vw, 0.85rem) !important;
+    color: #ffffff;
+  }
+
+  .rmg-card-title {
+    color: inherit !important;
   }
 
   .rmg-refurb-actions {
