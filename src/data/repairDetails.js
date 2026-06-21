@@ -1601,7 +1601,8 @@ export const modelFamilies = {
 export const iphoneRepairOptions = [
   {
     title: "Display Assembly",
-    description: "Replacement OLED display assembly to repair a damaged screen.",
+    description: "Replacement display assembly to repair a damaged screen.",
+    variants: ["Standard", "OLED", "Genuine"],
     price: "£149",
   },
   {
@@ -1703,6 +1704,7 @@ export const ipadRepairOptions = [
   {
     title: "Display Assembly",
     description: "Replacement display assembly for damaged screens or display faults.",
+    variants: ["Standard", "OLED", "Genuine"],
     price: "£139",
   },
   {
@@ -1764,6 +1766,7 @@ export const macRepairOptions = [
   {
     title: "Display Assembly",
     description: "Mac display replacement for cracked, flickering or faulty screens.",
+    variants: ["Standard", "OLED", "Genuine"],
     price: "£189",
   },
   {

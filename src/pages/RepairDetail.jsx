@@ -9,6 +9,7 @@ const RepairDetail = () => {
   const detail = repairDetails[slug] || repairDetails["iphone-14-pro-max-repairs"];
   const options = useMemo(() => getRepairOptions(detail.category), [detail]);
   const [selected, setSelected] = useState([]);
+  const [selectedVariants, setSelectedVariants] = useState({});
   const backLinks = {
     samsung: "/samsung repairs",
     ipad: "/ipad repair",
@@ -18,18 +19,51 @@ const RepairDetail = () => {
     ipod: "/ipod repair",
   };
 
-  const toggleOption = (title) => {
+  const toggleOption = (option) => {
+    setSelected((current) => {
+      const isSelected = current.includes(option.title);
+
+      if (isSelected) {
+        setSelectedVariants((variants) => {
+          const next = { ...variants };
+          delete next[option.title];
+          return next;
+        });
+        return current.filter((item) => item !== option.title);
+      }
+
+      if (option.variants) {
+        setSelectedVariants((variants) => ({
+          ...variants,
+          [option.title]: variants[option.title] || option.variants[0],
+        }));
+      }
+
+      return [...current, option.title];
+    });
+  };
+
+  const chooseVariant = (option, variant) => {
+    setSelectedVariants((current) => ({ ...current, [option.title]: variant }));
     setSelected((current) =>
-      current.includes(title)
-        ? current.filter((item) => item !== title)
-        : [...current, title]
+      current.includes(option.title) ? current : [...current, option.title]
     );
   };
 
   const submitBooking = () => {
-    const selectedIssues = options.filter((option) =>
-      selected.includes(option.title)
-    );
+    const selectedIssues = options
+      .filter((option) => selected.includes(option.title))
+      .map((option) => {
+        if (!option.variants) return option;
+
+        const variant = selectedVariants[option.title] || option.variants[0];
+
+        return {
+          ...option,
+          selectedVariant: variant,
+          title: `${option.title} - ${variant}`,
+        };
+      });
 
     if (selectedIssues.length === 0) return;
 
@@ -97,18 +131,20 @@ const RepairDetail = () => {
               const checked = selected.includes(option.title);
 
               return (
-                <label
+                <div
                   key={option.title}
                   className={`grid cursor-pointer grid-cols-[34px_1fr] gap-5 rounded-md border bg-white p-5 transition-colors duration-200 sm:p-6 ${
                     checked
                       ? "border-[#fb6433] bg-[#fff7f3]"
                       : "border-neutral-300 hover:border-[#fb6433]/60"
                   }`}
+                  onClick={() => toggleOption(option)}
                 >
                   <input
                     type="checkbox"
                     checked={checked}
-                    onChange={() => toggleOption(option.title)}
+                    onChange={() => toggleOption(option)}
+                    onClick={(event) => event.stopPropagation()}
                     className="mt-1 h-6 w-6 accent-[#fb6433]"
                   />
                   <span>
@@ -121,11 +157,37 @@ const RepairDetail = () => {
                       </span>{" "}
                       {option.description}
                     </span>
+                    {option.variants && (
+                      <span className="mt-5 block">
+                        <span className="mb-3 block text-[16px] font-extrabold text-[#171a23] sm:text-[17px]">
+                          Options:
+                        </span>
+                        {option.variants.map((variant) => (
+                          <label
+                            key={variant}
+                            className="mb-2 flex w-fit cursor-pointer items-center gap-3 rounded-md border border-neutral-300 bg-[#f7f7f7] px-4 py-2 text-[15px] font-bold text-[#252936]"
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <input
+                              type="radio"
+                              name={`${slug || detail.title}-${option.title}`}
+                              checked={
+                                (selectedVariants[option.title] ||
+                                  option.variants[0]) === variant
+                              }
+                              onChange={() => chooseVariant(option, variant)}
+                              className="h-4 w-4 accent-[#fb6433]"
+                            />
+                            {variant}
+                          </label>
+                        ))}
+                      </span>
+                    )}
                     <span className="mt-3 block text-[16px] font-semibold text-[#3e4650] sm:text-[17px]">
                       Price: {option.price}
                     </span>
                   </span>
-                </label>
+                </div>
               );
             })}
           </div>
