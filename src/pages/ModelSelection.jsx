@@ -21,7 +21,7 @@ const ModelSelection = () => {
       >
         <div className="absolute inset-0 bg-[#eef1fb]/82" />
         <div className="relative z-10 mx-auto max-w-[1120px]">
-          <h1 className="text-[40px] font-extrabold leading-tight sm:text-[50px] lg:text-[58px]">
+          <h1 className="text-[40px] font-bold leading-tight sm:text-[50px] lg:text-[58px]">
             {family.heading}
           </h1>
           <p className="mx-auto mt-5 max-w-[1040px] text-[16px] font-medium leading-relaxed text-[#252936] sm:text-[18px]">
@@ -32,7 +32,7 @@ const ModelSelection = () => {
 
       <section className="rmg-model-section mx-auto max-w-[1720px] px-6 py-16 sm:px-10 lg:px-20 lg:py-20">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h2 className="text-[30px] font-extrabold leading-tight sm:text-[38px] lg:text-[44px]">
+          <h2 className="text-[30px] font-bold leading-tight sm:text-[38px] lg:text-[44px]">
             <span className="text-[#fb6433]">Select your</span> {family.title}
             model
           </h2>
@@ -58,7 +58,7 @@ const ModelSelection = () => {
                   className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
                 />
               </div>
-              <h3 className="mt-4 text-[18px] font-extrabold leading-tight sm:text-[20px]">
+              <h3 className="mt-4 text-[18px] font-bold leading-tight sm:text-[20px]">
                 {model.title}
               </h3>
             </Link>

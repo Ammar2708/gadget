@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation, useOutletContext } from "react-router-dom";
 import {
   FaCheckCircle,
@@ -162,7 +162,7 @@ const Checkout = () => {
         >
           <div className="absolute inset-0 bg-[#eef1fb]/82" />
           <div className="relative mx-auto max-w-[1120px]">
-            <h1 className="text-[38px] font-extrabold leading-tight sm:text-[48px] lg:text-[54px]">
+            <h1 className="text-[38px] font-bold leading-tight sm:text-[48px] lg:text-[54px]">
               Booking Confirmation
             </h1>
             <p className="mx-auto mt-5 max-w-[900px] text-[16px] font-medium leading-relaxed text-[#252936] sm:text-[18px]">
@@ -178,7 +178,7 @@ const Checkout = () => {
                 <p className="text-[20px] font-medium text-[#171a23]">
                   Product Name:
                 </p>
-                <h2 className="mt-2 text-[28px] font-extrabold leading-tight">
+                <h2 className="mt-2 text-[28px] font-bold leading-tight">
                   {booking.productName}
                 </h2>
               </div>
@@ -202,7 +202,7 @@ const Checkout = () => {
                   <p className="text-[20px] font-medium text-[#171a23]">
                     Issue:
                   </p>
-                  <h3 className="mt-2 text-[28px] font-extrabold leading-tight">
+                  <h3 className="mt-2 text-[28px] font-bold leading-tight">
                     {issue.title}
                   </h3>
                   <p className="mt-4 text-[18px] leading-relaxed text-[#171a23]">
@@ -251,7 +251,7 @@ const Checkout = () => {
 
               <button
                 type="button"
-                className="flex h-14 w-full items-center justify-center rounded-md bg-[#fb6433] px-8 text-[20px] font-extrabold text-white transition-colors duration-200 hover:bg-[#df4a10]"
+                className="flex h-14 w-full items-center justify-center rounded-md bg-[#fb6433] px-8 text-[20px] font-bold text-white transition-colors duration-200 hover:bg-[#df4a10]"
               >
                 Submit
               </button>
@@ -273,7 +273,7 @@ const Checkout = () => {
           <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[#fb6433]">
             Secure checkout
           </p>
-          <h1 className="mt-4 text-[38px] font-extrabold leading-tight sm:text-[48px] lg:text-[54px]">
+          <h1 className="mt-4 text-[38px] font-bold leading-tight sm:text-[48px] lg:text-[54px]">
             Checkout
           </h1>
           <p className="mx-auto mt-5 max-w-[900px] text-[16px] font-medium leading-relaxed text-[#252936] sm:text-[18px]">
@@ -290,7 +290,7 @@ const Checkout = () => {
               <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#fb6433]">
                 Customer details
               </p>
-              <h2 className="mt-3 text-[30px] font-extrabold leading-tight sm:text-[38px]">
+              <h2 className="mt-3 text-[30px] font-bold leading-tight sm:text-[38px]">
                 Complete your order
               </h2>
             </div>
@@ -371,10 +371,10 @@ const Checkout = () => {
             </div>
 
             <div>
-              <h3 className="text-[26px] font-extrabold leading-tight">
+              <h3 className="text-[26px] font-bold leading-tight">
                 Shipping options
               </h3>
-              <label className="mt-6 flex min-h-[76px] cursor-pointer items-center justify-between gap-4 border-2 border-[#343943] bg-white px-5 py-4 text-[17px] font-extrabold">
+              <label className="mt-6 flex min-h-[76px] cursor-pointer items-center justify-between gap-4 border-2 border-[#343943] bg-white px-5 py-4 text-[17px] font-bold">
                 <span className="flex items-center gap-4">
                   <input
                     className="h-5 w-5 accent-black"
@@ -391,7 +391,7 @@ const Checkout = () => {
             </div>
 
             <div>
-              <h3 className="text-[26px] font-extrabold leading-tight">
+              <h3 className="text-[26px] font-bold leading-tight">
                 Payment options
               </h3>
               <div className="mt-6 overflow-hidden border border-neutral-200 bg-white">
@@ -433,7 +433,7 @@ const Checkout = () => {
                               aria-hidden="true"
                             />
                           )}
-                          <span className="text-[17px] font-extrabold">
+                          <span className="text-[17px] font-bold">
                             {method.name}
                           </span>
                         </span>
@@ -447,7 +447,7 @@ const Checkout = () => {
               </div>
             </div>
 
-            <label className="flex cursor-pointer items-center gap-4 text-[17px] font-extrabold">
+            <label className="flex cursor-pointer items-center gap-4 text-[17px] font-bold">
               <input
                 className="h-6 w-6 rounded border-neutral-300 accent-black"
                 type="checkbox"
@@ -499,7 +499,7 @@ const Checkout = () => {
 
             <button
               type="submit"
-              className="inline-flex h-14 w-full items-center justify-center gap-3 bg-[#fb6433] px-8 text-[14px] font-extrabold uppercase tracking-[0.14em] text-white transition-colors duration-200 hover:bg-[#df4a10] disabled:cursor-not-allowed disabled:bg-[#ffd8ca] disabled:text-[#b78373] sm:w-fit"
+              className="inline-flex h-14 w-full items-center justify-center gap-3 bg-[#fb6433] px-8 text-[14px] font-bold uppercase tracking-[0.14em] text-white transition-colors duration-200 hover:bg-[#df4a10] disabled:cursor-not-allowed disabled:bg-[#ffd8ca] disabled:text-[#b78373] sm:w-fit"
               disabled={!hasItems || isSubmitting}
             >
               <FaRegCreditCard aria-hidden="true" />
@@ -515,7 +515,7 @@ const Checkout = () => {
                 <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fb6433]">
                   Your basket
                 </p>
-                <h2 className="mt-1 text-[24px] font-extrabold leading-tight">
+                <h2 className="mt-1 text-[24px] font-bold leading-tight">
                   Order summary
                 </h2>
               </div>
@@ -541,7 +541,7 @@ const Checkout = () => {
                     <div className="min-w-0">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <h3 className="text-[14px] font-extrabold leading-tight">
+                          <h3 className="text-[14px] font-bold leading-tight">
                             {item.name}
                           </h3>
                           <p className="mt-1 text-[12px] font-semibold text-[#6c7280]">
@@ -568,7 +568,7 @@ const Checkout = () => {
                           >
                             <FaMinus className="text-[10px]" aria-hidden="true" />
                           </button>
-                          <span className="w-8 text-center text-[12px] font-extrabold">
+                          <span className="w-8 text-center text-[12px] font-bold">
                             {item.quantity}
                           </span>
                           <button
@@ -581,7 +581,7 @@ const Checkout = () => {
                           </button>
                         </div>
 
-                        <p className="text-[15px] font-extrabold">
+                        <p className="text-[15px] font-bold">
                           {currencyFormatter.format(
                             item.priceValue * item.quantity
                           )}
@@ -593,7 +593,7 @@ const Checkout = () => {
               </div>
             ) : (
               <div className="mt-6 border border-dashed border-[#f0b8a5] bg-white px-5 py-9 text-center">
-                <h3 className="text-[17px] font-extrabold leading-tight">
+                <h3 className="text-[17px] font-bold leading-tight">
                   Your cart is empty
                 </h3>
                 <p className="mx-auto mt-3 max-w-[300px] text-[14px] leading-relaxed text-[#626977]">
@@ -628,10 +628,10 @@ const Checkout = () => {
                 </span>
               </div>
               <div className="mt-4 flex items-center justify-between gap-4 border-t border-neutral-200 pt-4">
-                <span className="text-[16px] font-extrabold uppercase tracking-[0.12em]">
+                <span className="text-[16px] font-bold uppercase tracking-[0.12em]">
                   Total
                 </span>
-                <span className="text-[24px] font-extrabold text-[#fb6433]">
+                <span className="text-[24px] font-bold text-[#fb6433]">
                   {currencyFormatter.format(subtotal)}
                 </span>
               </div>

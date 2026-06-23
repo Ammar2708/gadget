@@ -32,7 +32,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-white/30" />
         <div className="relative mx-auto max-w-[1200px]">
-          <h1 className="text-[40px] font-extrabold leading-tight sm:text-[48px] lg:text-[54px]">
+          <h1 className="text-[40px] font-bold leading-tight sm:text-[48px] lg:text-[54px]">
             Contact Us
           </h1>
           <p className="mx-auto mt-5 max-w-[980px] text-[17px] font-medium leading-relaxed text-[#20242c] sm:text-[18px]">
@@ -44,7 +44,7 @@ const Hero = () => {
 
       <section className="mx-auto grid max-w-[1720px] gap-14 px-6 py-16 sm:px-10 lg:grid-cols-[1.25fr_0.75fr] lg:px-20 lg:py-20">
         <div>
-          <h2 className="text-[36px] font-extrabold leading-tight sm:text-[44px]">
+          <h2 className="text-[36px] font-bold leading-tight sm:text-[44px]">
             <span className="text-[#fb6433]">Send</span> us a message
           </h2>
 
@@ -75,7 +75,7 @@ const Hero = () => {
         </div>
 
         <div>
-          <h2 className="text-[36px] font-extrabold leading-tight sm:text-[44px]">
+          <h2 className="text-[36px] font-bold leading-tight sm:text-[44px]">
             <span className="text-[#fb6433]">Contact</span> information
           </h2>
 
@@ -86,7 +86,7 @@ const Hero = () => {
                 <div className="flex items-center gap-8 bg-[#f3f8f8] px-9 py-7 transition-transform duration-200 hover:-translate-y-1">
                   <Icon className="shrink-0 text-[38px] text-[#fb5c1c]" />
                   <div>
-                    <h3 className="text-[24px] font-extrabold leading-tight">
+                    <h3 className="text-[24px] font-bold leading-tight">
                       {item.title}
                     </h3>
                     <p className="mt-2 text-[17px] font-medium leading-relaxed text-[#171a23]">

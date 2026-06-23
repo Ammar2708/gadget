@@ -13,7 +13,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-white/30" />
         <div className="relative mx-auto max-w-[1380px]">
-          <h1 className="text-[40px] font-extrabold leading-tight sm:text-[48px] lg:text-[54px]">
+          <h1 className="text-[40px] font-bold leading-tight sm:text-[48px] lg:text-[54px]">
             About Us
           </h1>
           <p className="mx-auto mt-6 max-w-[1350px] text-[17px] font-medium leading-relaxed text-[#20242c] sm:text-[19px]">
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
 
         <div className="max-w-[820px]">
-          <h2 className="text-[38px] font-extrabold leading-tight sm:text-[48px] lg:text-[56px]">
+          <h2 className="text-[38px] font-bold leading-tight sm:text-[48px] lg:text-[56px]">
             Apple Repair Services
           </h2>
           <div className="mt-6 h-px w-full bg-neutral-200" />
@@ -59,7 +59,7 @@ const Hero = () => {
 
       <section className="mx-auto grid max-w-[1720px] gap-10 px-6 pb-18 sm:px-10 lg:grid-cols-[0.92fr_1fr] lg:px-20 lg:pb-24">
         <div>
-          <h2 className="text-[38px] font-extrabold leading-tight sm:text-[48px] lg:text-[54px]">
+          <h2 className="text-[38px] font-bold leading-tight sm:text-[48px] lg:text-[54px]">
             Our mission
           </h2>
           <div className="mt-6 h-px w-full max-w-[700px] bg-neutral-200" />
@@ -90,7 +90,7 @@ const Hero = () => {
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             {stats.map((item) => (
               <div key={item.label} className="border-t-4 border-[#4bd37d] pt-4">
-                <p className="text-[24px] font-extrabold leading-tight text-[#171a23]">
+                <p className="text-[24px] font-bold leading-tight text-[#171a23]">
                   {item.value}
                 </p>
                 <p className="mt-2 text-[15px] font-medium text-[#444]">

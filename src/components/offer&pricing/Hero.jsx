@@ -1,4 +1,4 @@
-ï»¿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaClock, FaShieldAlt, FaTools, FaWrench } from "react-icons/fa";
 
 const highlights = [
@@ -24,11 +24,11 @@ const services = [
     imageAlt: "Smartphone repair",
     reverse: false,
     prices: [
-      ["Replacing glass", "Â£99.99"],
-      ["Replacing screen", "Â£32.99"],
-      ["Changing battery", "Â£75.90"],
-      ["Repair device", "Â£28.00"],
-      ["Cleaning", "Â£21.00"],
+      ["Replacing glass", "£99.99"],
+      ["Replacing screen", "£32.99"],
+      ["Changing battery", "£75.90"],
+      ["Repair device", "£28.00"],
+      ["Cleaning", "£21.00"],
     ],
   },
   {
@@ -38,11 +38,11 @@ const services = [
     imageAlt: "Tablet repair",
     reverse: true,
     prices: [
-      ["Replacing glass", "Â£99.99"],
-      ["Replacing screen", "Â£32.99"],
-      ["Changing battery", "Â£75.90"],
-      ["Repair device", "Â£28.00"],
-      ["Cleaning", "Â£21.00"],
+      ["Replacing glass", "£99.99"],
+      ["Replacing screen", "£32.99"],
+      ["Changing battery", "£75.90"],
+      ["Repair device", "£28.00"],
+      ["Cleaning", "£21.00"],
     ],
   },
   {
@@ -52,11 +52,11 @@ const services = [
     imageAlt: "Laptop repair",
     reverse: false,
     prices: [
-      ["Replacing display", "Â£129.99"],
-      ["Battery service", "Â£89.00"],
-      ["Keyboard repair", "Â£69.00"],
-      ["Software repair", "Â£35.00"],
-      ["Deep cleaning", "Â£24.00"],
+      ["Replacing display", "£129.99"],
+      ["Battery service", "£89.00"],
+      ["Keyboard repair", "£69.00"],
+      ["Software repair", "£35.00"],
+      ["Deep cleaning", "£24.00"],
     ],
   },
 ];
@@ -65,10 +65,10 @@ const PriceList = ({ prices }) => (
   <div className="mt-7 divide-y divide-neutral-200">
     {prices.map(([label, price]) => (
       <div key={label} className="flex items-center justify-between gap-5 py-3">
-        <span className="text-[16px] font-extrabold leading-tight text-[#111827] sm:text-[17px]">
+        <span className="text-[16px] font-bold leading-tight text-[#111827] sm:text-[17px]">
           {label}
         </span>
-        <span className="shrink-0 text-[16px] font-extrabold text-[#fb6433] sm:text-[18px]">
+        <span className="shrink-0 text-[16px] font-bold text-[#fb6433] sm:text-[18px]">
           {price}
         </span>
       </div>
@@ -81,7 +81,7 @@ const Hero = () => {
     <div className="bg-white text-[#111827]">
       <section className="mx-auto max-w-[1440px] px-6 pb-12 pt-22 sm:px-10 lg:px-16 lg:pb-16 lg:pt-28">
         <div className="mx-auto max-w-[760px] text-center">
-          <h1 className="text-[34px] font-extrabold leading-tight sm:text-[42px] lg:text-[48px]">
+          <h1 className="text-[34px] font-bold leading-tight sm:text-[42px] lg:text-[48px]">
             <span className="text-[#fb6433]">We repair</span> any device
             <span className="block">smartphone, tablet, laptop, etc...</span>
           </h1>
@@ -95,7 +95,7 @@ const Hero = () => {
               return (
                 <div key={item.title} className="mx-auto max-w-[190px]">
                   <Icon className="mx-auto text-[42px] text-[#111827]" />
-                  <h2 className="mt-5 text-[18px] font-extrabold leading-snug text-[#111827]">
+                  <h2 className="mt-5 text-[18px] font-bold leading-snug text-[#111827]">
                     {item.title}
                   </h2>
                 </div>
@@ -123,7 +123,7 @@ const Hero = () => {
               </div>
 
               <div className="service-copy max-w-[580px]">
-                <h2 className="text-[34px] font-extrabold leading-tight sm:text-[42px] lg:text-[48px]">
+                <h2 className="text-[34px] font-bold leading-tight sm:text-[42px] lg:text-[48px]">
                   <span className="text-[#fb6433]">
                     {service.title.split(" ")[0]}
                   </span>{" "}
@@ -148,7 +148,7 @@ const Hero = () => {
           />
 
           <div className="text-center">
-            <h2 className="text-[28px] font-extrabold leading-tight sm:text-[34px]">
+            <h2 className="text-[28px] font-bold leading-tight sm:text-[34px]">
               <span className="text-[#fb6433]">Locate</span> your fix
             </h2>
             <p className="mx-auto mt-4 max-w-[560px] text-[15px] leading-relaxed text-white/86">
@@ -160,7 +160,7 @@ const Hero = () => {
           <div className="text-center">
             <a
               href="tel:01932844494"
-              className="text-[26px] font-extrabold leading-tight text-white/80 sm:text-[30px]"
+              className="text-[26px] font-bold leading-tight text-white/80 sm:text-[30px]"
             >
               01932 844494
             </a>

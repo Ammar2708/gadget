@@ -111,14 +111,14 @@ const Term = () => {
       </section>
 
       <section className="mx-auto max-w-[1720px] px-6 py-12 sm:px-10 lg:px-20 lg:py-14">
-        <h2 className="text-[40px] font-extrabold leading-tight text-[#071224] sm:text-[48px] lg:text-[54px]">
+        <h2 className="text-[40px] font-bold leading-tight text-[#071224] sm:text-[48px] lg:text-[54px]">
           Terms and Conditions
         </h2>
 
         <div className="mt-7 divide-y divide-neutral-200">
           {sections.map((section, index) => (
             <article key={section.title} className="py-7 first:pt-0">
-              <h3 className="text-[27px] font-extrabold leading-tight text-[#071224] sm:text-[34px] lg:text-[38px]">
+              <h3 className="text-[27px] font-bold leading-tight text-[#071224] sm:text-[34px] lg:text-[38px]">
                 {index + 1}. {section.title}
               </h3>
 
@@ -140,7 +140,7 @@ const Term = () => {
                     >
                       <span>{itemIndex + 1}.</span>
                       <span>
-                        <strong className="font-extrabold text-[#66727d]">
+                        <strong className="font-bold text-[#66727d]">
                           {label}:
                         </strong>{" "}
                         {text}
@@ -152,7 +152,7 @@ const Term = () => {
 
               {section.contact && (
                 <address className="mt-4 text-[15px] not-italic leading-relaxed text-[#111827] sm:text-[16px] lg:text-[17px]">
-                  <strong className="font-extrabold">Repair My Gadget</strong>
+                  <strong className="font-bold">Repair My Gadget</strong>
                   <br />
                   44 Baker Street, Weybridge KT13 8AR
                   <br />

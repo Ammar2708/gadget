@@ -61,7 +61,7 @@ const CartDrawer = ({
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#fb6433]">
                   Repair My Gadget
                 </p>
-                <h2 className="mt-1 text-[22px] font-extrabold leading-none">
+                <h2 className="mt-1 text-[22px] font-bold leading-none">
                   Your Cart
                 </h2>
               </div>
@@ -82,18 +82,18 @@ const CartDrawer = ({
           <div className="rounded-lg border border-neutral-200 bg-white p-4 shadow-[0_10px_28px_rgba(15,23,42,0.05)]">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#969ca8]">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#969ca8]">
                   Items
                 </p>
-                <p className="mt-1.5 text-[16px] font-extrabold text-[#171a23]">
+                <p className="mt-1.5 text-[16px] font-bold text-[#171a23]">
                   {totalItems} {totalItems === 1 ? "product" : "products"}
                 </p>
               </div>
               <div className="text-right">
-                <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#969ca8]">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#969ca8]">
                   Subtotal
                 </p>
-                <p className="mt-1.5 text-[20px] font-extrabold text-[#fb6433]">
+                <p className="mt-1.5 text-[20px] font-bold text-[#fb6433]">
                   {currencyFormatter.format(subtotal)}
                 </p>
               </div>
@@ -118,7 +118,7 @@ const CartDrawer = ({
                   <div className="min-w-0">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <h3 className="text-[13px] font-extrabold leading-tight text-[#171a23]">
+                        <h3 className="text-[13px] font-bold leading-tight text-[#171a23]">
                           {item.name}
                         </h3>
                         <p className="mt-1 text-[11px] font-semibold text-[#6c7280]">
@@ -145,7 +145,7 @@ const CartDrawer = ({
                         >
                           <FaMinus className="text-[10px]" aria-hidden="true" />
                         </button>
-                        <span className="w-7 text-center text-[12px] font-extrabold text-[#171a23]">
+                        <span className="w-7 text-center text-[12px] font-bold text-[#171a23]">
                           {item.quantity}
                         </span>
                         <button
@@ -158,7 +158,7 @@ const CartDrawer = ({
                         </button>
                       </div>
 
-                      <p className="text-[14px] font-extrabold text-[#171a23]">
+                      <p className="text-[14px] font-bold text-[#171a23]">
                         {currencyFormatter.format(
                           item.priceValue * item.quantity
                         )}
@@ -173,7 +173,7 @@ const CartDrawer = ({
               <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#fff0ea] text-[22px] text-[#fb6433]">
                 <FaShoppingBag aria-hidden="true" />
               </span>
-              <h3 className="mt-5 text-[16px] font-extrabold uppercase tracking-[0.08em] text-[#171a23]">
+              <h3 className="mt-5 text-[16px] font-bold uppercase tracking-[0.08em] text-[#171a23]">
                 Your cart is empty
               </h3>
               <p className="mx-auto mt-3 max-w-[280px] text-[12px] leading-relaxed text-[#626977]">
@@ -187,17 +187,17 @@ const CartDrawer = ({
         <div className="border-t border-neutral-200 bg-white px-4 py-4 sm:px-6">
           <div className="rounded-lg border border-neutral-200 bg-[#fffaf7] p-4 shadow-[0_10px_26px_rgba(15,23,42,0.06)]">
             <div className="flex items-center justify-between gap-4">
-              <p className="text-[13px] font-extrabold uppercase tracking-[0.14em] text-[#171a23]">
+              <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-[#171a23]">
                 Total
               </p>
-              <p className="text-[20px] font-extrabold text-[#fb6433]">
+              <p className="text-[20px] font-bold text-[#fb6433]">
                 {currencyFormatter.format(subtotal)}
               </p>
             </div>
 
             <button
               type="button"
-              className="mt-4 flex h-11 w-full items-center justify-center gap-2.5 rounded-md bg-[#fb6433] px-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white transition-colors duration-200 hover:bg-[#df4a10] disabled:cursor-not-allowed disabled:bg-[#ffd8ca] disabled:text-[#b78373]"
+              className="mt-4 flex h-11 w-full items-center justify-center gap-2.5 rounded-md bg-[#fb6433] px-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors duration-200 hover:bg-[#df4a10] disabled:cursor-not-allowed disabled:bg-[#ffd8ca] disabled:text-[#b78373]"
               disabled={!hasItems}
               onClick={() => {
                 onClose();

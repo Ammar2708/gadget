@@ -1,4 +1,4 @@
-ï»¿import { useState } from "react";
+import { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import {
   FaApple,
@@ -12,55 +12,55 @@ import {
 const products = [
   {
     name: "iPhone 15 Pro",
-    price: "Â£679.00",
+    price: "£679.00",
     image: "/img25.png",
     detail: "Premium display, pro camera system and excellent battery health.",
   },
   {
     name: "iPhone 15",
-    price: "Â£539.00",
+    price: "£539.00",
     image: "/img24.png",
     detail: "A clean everyday iPhone with modern performance and warranty.",
   },
   {
     name: "iPhone 14 Pro Max",
-    price: "Â£499.00 - Â£759.00",
+    price: "£499.00 - £759.00",
     image: "/img4.png",
     detail: "Large display, strong battery life and a carefully checked finish.",
   },
   {
     name: "iPhone 14",
-    price: "Â£499.00",
+    price: "£499.00",
     image: "/img4.png",
     detail: "Certified, tested and ready for daily use with reliable support.",
   },
   {
     name: "iPhone 13 Pro",
-    price: "Â£439.00",
+    price: "£439.00",
     image: "/img34.png",
     detail: "A refined pro model with smooth performance and checked parts.",
   },
   {
     name: "iPhone 13 Mini",
-    price: "Â£319.00",
+    price: "£319.00",
     image: "/img5.png",
     detail: "Compact size, sharp display and dependable refurbished quality.",
   },
   {
     name: "iPhone 12 Pro",
-    price: "Â£349.00",
+    price: "£349.00",
     image: "/img7.png",
     detail: "Pro feel, polished design and careful functional testing.",
   },
   {
     name: "iPhone 11 Pro Max",
-    price: "Â£339.00 - Â£389.00",
+    price: "£339.00 - £389.00",
     image: "/iphone11.png",
     detail: "A larger classic iPhone with reliable battery and camera checks.",
   },
   {
     name: "iPhone X",
-    price: "Â£229.00",
+    price: "£229.00",
     image: "/img11.png",
     detail: "Affordable OLED iPhone option, tested for everyday essentials.",
   },
@@ -156,7 +156,7 @@ const Hero = () => {
           <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[#fb6433]">
             Certified refurbished
           </p>
-          <h1 className="mt-4 max-w-[780px] text-[38px] font-extrabold leading-tight sm:text-[46px] lg:text-[54px]">
+          <h1 className="mt-4 max-w-[780px] text-[38px] font-bold leading-tight sm:text-[46px] lg:text-[54px]">
             Refurbished iPhone
           </h1>
           <p className="mt-5 max-w-[800px] text-[16px] leading-relaxed text-[#333844] sm:text-[18px]">
@@ -197,7 +197,7 @@ const Hero = () => {
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#fb6433]">
               Available models
             </p>
-            <h2 className="mt-3 text-[30px] font-extrabold leading-tight sm:text-[38px]">
+            <h2 className="mt-3 text-[30px] font-bold leading-tight sm:text-[38px]">
               Pick your refurbished iPhone
             </h2>
           </div>
@@ -238,7 +238,7 @@ const Hero = () => {
                     />
                   </div>
                   <div className="rmg-refurb-front-copy px-6 py-6 text-center">
-                    <h3 className="text-[22px] font-extrabold leading-tight">
+                    <h3 className="text-[22px] font-bold leading-tight">
                       {product.name}
                     </h3>
                     <p className="mt-3 text-[17px] font-semibold text-black">
@@ -255,13 +255,13 @@ const Hero = () => {
                     <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-[#ff8a5c]">
                       Refurbished
                     </p>
-                    <h3 className="mt-3 text-[24px] font-extrabold leading-tight">
+                    <h3 className="mt-3 text-[24px] font-bold leading-tight">
                       {product.name}
                     </h3>
                     <p className="mt-4 text-[15px] leading-relaxed text-white/78">
                       {product.detail}
                     </p>
-                    <p className="mt-6 text-[18px] font-extrabold">
+                    <p className="mt-6 text-[18px] font-bold">
                       {product.price}
                     </p>
                     <div className="rmg-refurb-actions mt-7 flex flex-wrap justify-center gap-3">
@@ -306,7 +306,7 @@ const Hero = () => {
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 <Icon className="mx-auto text-[42px] text-[#fb6433]" />
-                <h3 className="mt-5 text-[22px] font-extrabold leading-tight">
+                <h3 className="mt-5 text-[22px] font-bold leading-tight">
                   {benefit.title}
                 </h3>
                 <p className="mx-auto mt-3 max-w-[360px] text-[15px] leading-relaxed text-[#444]">
@@ -340,7 +340,7 @@ const Hero = () => {
                 </p>
                 <h2
                   id="iphone-refurbished-popup-title"
-                  className="mt-1 text-[24px] font-extrabold leading-tight sm:text-[30px]"
+                  className="mt-1 text-[24px] font-bold leading-tight sm:text-[30px]"
                 >
                   {selectedProduct.name}
                 </h2>
@@ -406,7 +406,7 @@ const Hero = () => {
                     Warranty support included
                   </div>
                 </div>
-                <p className="mt-6 text-[22px] font-extrabold text-[#171a23]">
+                <p className="mt-6 text-[22px] font-bold text-[#171a23]">
                   {selectedProduct.price}
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">

@@ -56,7 +56,7 @@ const disputeItems = [
 ];
 
 const AccentTitle = ({ children, accent }) => (
-  <h2 className="text-center text-[24px] font-extrabold leading-tight text-[#171a23] sm:text-[28px]">
+  <h2 className="text-center text-[24px] font-bold leading-tight text-[#171a23] sm:text-[28px]">
     {children} <span className="text-[#fb6433]">{accent}</span>
   </h2>
 );
@@ -70,7 +70,7 @@ const Why = () => {
       >
         <div className="absolute inset-0 bg-[#eef1fb]/82" />
         <div className="relative z-10 mx-auto max-w-[900px]">
-          <h1 className="text-[38px] font-extrabold leading-tight text-black sm:text-[48px] lg:text-[56px]">
+          <h1 className="text-[38px] font-bold leading-tight text-black sm:text-[48px] lg:text-[56px]">
             Why Refurbished?
           </h1>
           <p className="mt-5 text-[15px] font-medium leading-relaxed text-[#252b33] sm:text-[17px]">
@@ -81,7 +81,7 @@ const Why = () => {
       </section>
 
       <section className="mx-auto max-w-[1720px] px-6 py-16 text-center sm:px-10 lg:px-20 lg:py-20">
-        <h2 className="text-[23px] font-extrabold leading-tight text-[#171a23] sm:text-[27px]">
+        <h2 className="text-[23px] font-bold leading-tight text-[#171a23] sm:text-[27px]">
           Welcome to <span className="text-[#fb6433]">Repair My Gadget</span> -
           Your Trusted Source for New and Used Phones
         </h2>
@@ -151,7 +151,7 @@ const Why = () => {
           <ol className="mt-8 space-y-6 text-[#707b84]">
             {assuranceItems.map((item, index) => (
               <li key={item.title} className="text-[15px] leading-relaxed sm:text-[16px]">
-                <strong className="font-extrabold">
+                <strong className="font-bold">
                   {index + 1}. {item.title}
                 </strong>
                 <p className="mt-2 pl-6">{item.text}</p>
@@ -163,7 +163,7 @@ const Why = () => {
 
       <section className="bg-[#f3f3f3] px-6 py-14 sm:px-10 lg:px-20 lg:py-18">
         <div className="mx-auto max-w-[1600px]">
-          <h2 className="text-center text-[24px] font-extrabold leading-tight text-[#171a23] sm:text-[28px]">
+          <h2 className="text-center text-[24px] font-bold leading-tight text-[#171a23] sm:text-[28px]">
             What Does the Dispute Process Look Like?
           </h2>
           <p className="mt-5 text-[15px] leading-relaxed text-[#3d3d3d] sm:text-[17px]">
@@ -175,7 +175,7 @@ const Why = () => {
           <ol className="mt-8 space-y-6 text-[#707b84]">
             {disputeItems.map((item, index) => (
               <li key={item.title} className="text-[15px] leading-relaxed sm:text-[16px]">
-                <strong className="font-extrabold">
+                <strong className="font-bold">
                   {index + 1}. {item.title}
                 </strong>
                 <p className="mt-2 pl-6">{item.text}</p>
@@ -186,7 +186,7 @@ const Why = () => {
       </section>
 
       <section className="bg-[#f3f3f3] px-6 py-14 text-center sm:px-10 lg:px-20 lg:py-18">
-        <h2 className="text-[32px] font-extrabold leading-tight text-[#171a23] sm:text-[40px]">
+        <h2 className="text-[32px] font-bold leading-tight text-[#171a23] sm:text-[40px]">
           <span className="text-[#fb6433]">Shop Now</span> and Find Your{" "}
           <span className="text-[#fb6433]">Next Phone</span> Today!
         </h2>

@@ -115,7 +115,7 @@ const Refund = () => {
           </p>
 
           <div className="mt-8">
-            <h2 className="text-[32px] font-extrabold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
+            <h2 className="text-[32px] font-bold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
               Eligibility for Returns and Refunds
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-[#111827] sm:text-[17px]">
@@ -127,14 +127,14 @@ const Refund = () => {
           </div>
 
           <div className="mt-8">
-            <h2 className="text-[32px] font-extrabold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
+            <h2 className="text-[32px] font-bold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
               Exclusions from the Return Policy
             </h2>
             <NumberedList items={exclusionItems} />
           </div>
 
           <div className="mt-8">
-            <h2 className="text-[32px] font-extrabold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
+            <h2 className="text-[32px] font-bold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
               Return Process
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-[#111827] sm:text-[17px]">
@@ -144,7 +144,7 @@ const Refund = () => {
           </div>
 
           <div className="mt-8">
-            <h2 className="text-[32px] font-extrabold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
+            <h2 className="text-[32px] font-bold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
               Refund Timeline
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-[#111827] sm:text-[17px]">
@@ -156,7 +156,7 @@ const Refund = () => {
           </div>
 
           <div className="mt-8">
-            <h2 className="text-[32px] font-extrabold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
+            <h2 className="text-[32px] font-bold leading-tight text-[#071224] sm:text-[38px] lg:text-[42px]">
               Contact Us
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-[#111827] sm:text-[17px]">

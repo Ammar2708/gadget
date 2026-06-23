@@ -1603,6 +1603,11 @@ export const iphoneRepairOptions = [
     title: "Display Assembly",
     description: "Replacement display assembly to repair a damaged screen.",
     variants: ["Standard", "OLED", "Genuine"],
+    variantPrices: {
+      Standard: "£149",
+      OLED: "£139",
+      Genuine: "£199",
+    },
     price: "£149",
   },
   {
@@ -1644,11 +1649,6 @@ export const iphoneRepairOptions = [
     title: "Rear Housing",
     description: "Replacement rear housing including back glass.",
     price: "£199",
-  },
-  {
-    title: "Premium Screen Replacement (OLED)",
-    description: "A high-quality OLED screen replacement for a broken display.",
-    price: "£139",
   },
 ];
 

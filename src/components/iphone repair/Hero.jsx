@@ -73,7 +73,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-white/45" />
         <div className="relative mx-auto max-w-[1120px]">
-          <h1 className="text-[34px] font-extrabold leading-tight sm:text-[40px] lg:text-[46px]">
+          <h1 className="text-[34px] font-bold leading-tight sm:text-[40px] lg:text-[46px]">
             iPhone Repairs
           </h1>
           <p className="mx-auto mt-4 max-w-[900px] text-[15px] font-medium leading-relaxed text-[#252936] sm:text-[16px]">
@@ -85,7 +85,7 @@ const Hero = () => {
 
       <section className="rmg-model-section mx-auto max-w-[1720px] px-6 py-14 sm:px-10 lg:px-20 lg:py-16">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h2 className="text-[28px] font-extrabold leading-tight sm:text-[36px] lg:text-[40px]">
+          <h2 className="text-[28px] font-bold leading-tight sm:text-[36px] lg:text-[40px]">
             <span className="text-[#fb6433]">Select your</span> iPhone model
           </h2>
           <Link
@@ -110,7 +110,7 @@ const Hero = () => {
                   className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
                 />
               </div>
-              <h3 className="mt-4 text-[18px] font-extrabold leading-tight">
+              <h3 className="mt-4 text-[18px] font-bold leading-tight">
                 {model.title}
               </h3>
             </Link>
@@ -126,7 +126,7 @@ const Hero = () => {
             className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[500px]"
           />
           <div>
-            <h2 className="text-[30px] font-extrabold leading-tight sm:text-[38px] lg:text-[42px]">
+            <h2 className="text-[30px] font-bold leading-tight sm:text-[38px] lg:text-[42px]">
               Excellent client service is the foundation of our company
             </h2>
             <p className="mt-5 max-w-[760px] text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">
@@ -151,7 +151,7 @@ const Hero = () => {
               <div key={benefit.title} className="flex gap-6">
                 <Icon className="mt-2 shrink-0 text-[42px] text-[#fb5c1c]" />
                 <div>
-                  <h3 className="text-[20px] font-extrabold leading-tight">
+                  <h3 className="text-[20px] font-bold leading-tight">
                     {benefit.title}
                   </h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-[#666]">
@@ -165,7 +165,7 @@ const Hero = () => {
       </section>
 
       <section className="mx-auto max-w-[1720px] px-6 py-14 text-center sm:px-10 lg:px-20 lg:py-16">
-        <h2 className="text-[34px] font-extrabold leading-tight sm:text-[42px]">
+        <h2 className="text-[34px] font-bold leading-tight sm:text-[42px]">
           <span className="text-[#fb6433]">Our</span> method of repair
         </h2>
         <p className="mx-auto mt-4 max-w-[1260px] text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">
@@ -176,7 +176,7 @@ const Hero = () => {
 
         <div className="mt-14 grid items-center gap-10 text-left lg:grid-cols-2">
           <div>
-            <h3 className="text-[26px] font-extrabold leading-tight">
+            <h3 className="text-[26px] font-bold leading-tight">
               Screen Changes
             </h3>
             <p className="mt-4 text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">
@@ -197,7 +197,7 @@ const Hero = () => {
             className="h-[240px] w-full object-cover sm:h-[290px]"
           />
           <div>
-            <h3 className="text-[26px] font-extrabold leading-tight">
+            <h3 className="text-[26px] font-bold leading-tight">
               Replace Batteries
             </h3>
             <p className="mt-4 text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">
@@ -221,7 +221,7 @@ const Hero = () => {
             className="h-[360px] w-full object-cover sm:h-[420px]"
           />
           <div>
-            <h2 className="text-[34px] font-extrabold leading-tight sm:text-[42px]">
+            <h2 className="text-[34px] font-bold leading-tight sm:text-[42px]">
               <span className="text-[#fb6433]">How</span> we're different
             </h2>
             <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">
@@ -240,7 +240,7 @@ const Hero = () => {
       </section>
 
       <section className="mx-auto max-w-[1720px] px-6 py-14 text-center sm:px-10 lg:px-20 lg:py-16">
-        <h2 className="text-[34px] font-extrabold leading-tight sm:text-[42px]">
+        <h2 className="text-[34px] font-bold leading-tight sm:text-[42px]">
           <span className="text-[#fb6433]">The</span> Minor Details
         </h2>
         <p className="mx-auto mt-4 max-w-[1320px] text-[16px] leading-relaxed text-[#3a3a3a] sm:text-[17px]">

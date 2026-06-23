@@ -35,13 +35,13 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="mb-6 text-[22px] font-bold leading-none">Repairs</h2>
-          <ul className="space-y-5">
+          <h2 className="mb-5 text-[20px] font-bold leading-none">Repairs</h2>
+          <ul className="space-y-4">
             {repairs.map((item) => (
               <li key={item.label}>
                 <Link
                   to={item.path}
-                  className="text-[17px] font-medium leading-tight text-white transition-colors duration-200 hover:text-[#087cff]"
+                  className="text-[15px] font-medium leading-tight text-white transition-colors duration-200 hover:text-[#087cff]"
                 >
                   {item.label}
                 </Link>
@@ -51,13 +51,13 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="mb-6 text-[22px] font-bold leading-none">Quick links</h2>
-          <ul className="space-y-5">
+          <h2 className="mb-5 text-[20px] font-bold leading-none">Quick links</h2>
+          <ul className="space-y-4">
             {quickLinks.map((item) => (
               <li key={item.label}>
                 <Link
                   to={item.path}
-                  className="text-[17px] font-medium leading-tight text-white transition-colors duration-200 hover:text-[#087cff]"
+                  className="text-[15px] font-medium leading-tight text-white transition-colors duration-200 hover:text-[#087cff]"
                 >
                   {item.label}
                 </Link>
@@ -67,9 +67,9 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className="mb-6 text-[22px] font-bold leading-none">Contact</h2>
+          <h2 className="mb-5 text-[20px] font-bold leading-none">Contact</h2>
 
-          <div className="space-y-6 text-[17px] font-medium leading-relaxed">
+          <div className="space-y-5 text-[15px] font-medium leading-relaxed">
             <div>
               <p className="mb-2 font-bold text-[#087cff]">Company Number:</p>
               <p>12337790</p>
@@ -108,7 +108,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-[1580px] flex-col items-center justify-between gap-4 px-6 py-6 text-center text-[16px] font-medium text-neutral-500 sm:flex-row sm:px-10 sm:text-left lg:px-20">
+        <div className="mx-auto flex max-w-[1580px] flex-col items-center justify-between gap-4 px-6 py-6 text-center text-[14px] font-medium text-neutral-500 sm:flex-row sm:px-10 sm:text-left lg:px-20">
           <p>© 2021 All Rights Reserved</p>
           <a
             href="https://www.tiktok.com"

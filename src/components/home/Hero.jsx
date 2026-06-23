@@ -52,6 +52,23 @@ const Hero = () => {
               animation: rmgHeroRise 0.7s ease 0.12s both;
             }
 
+            .home-overview-title .home-overview-title-accent {
+              color: #ff6534;
+              font-size: 50px;
+              line-height: inherit;
+              font-weight: 700;
+            }
+
+            .home-overview-title {
+              font-weight: 700;
+            }
+
+            .home-provide-title-accent {
+              color: #ff6534;
+              font-size: 50px;
+              line-height: inherit;
+            }
+
             @media (max-width: 639px) {
               .home-hero-stage {
                 min-height: 590px !important;
@@ -121,6 +138,148 @@ const Hero = () => {
                 white-space: nowrap !important;
                 box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) !important;
               }
+
+              .home-overview-section {
+                display: block !important;
+                width: 100% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 3rem 1rem 3.5rem !important;
+              }
+
+              .home-overview-media {
+                width: 100% !important;
+                border-radius: 0.5rem !important;
+                overflow: hidden !important;
+              }
+
+              .home-overview-image {
+                width: 100% !important;
+                height: 230px !important;
+                min-height: 0 !important;
+                object-fit: cover !important;
+              }
+
+              .home-overview-copy {
+                padding-top: 1.5rem !important;
+                max-width: none !important;
+              }
+
+              .home-overview-eyebrow {
+                margin-bottom: 0.85rem !important;
+                font-size: 0.78rem !important;
+                line-height: 1 !important;
+                letter-spacing: 0.08em !important;
+              }
+
+              .home-overview-title {
+                font-size: clamp(2rem, 10vw, 2.75rem) !important;
+                line-height: 1.04 !important;
+                font-weight: 800 !important;
+                overflow-wrap: normal !important;
+              }
+
+              .home-overview-title .home-overview-title-accent {
+                font-size: 2.55rem !important;
+                line-height: inherit !important;
+                font-weight: inherit !important;
+              }
+
+              .home-provide-title-accent {
+                font-size: 2.55rem !important;
+                line-height: inherit !important;
+              }
+
+              .home-locate-section {
+                position: relative !important;
+                overflow: hidden !important;
+                background: #eef1fb !important;
+              }
+
+              .home-locate-inner {
+                position: relative !important;
+                display: block !important;
+                min-height: 0 !important;
+                padding: 0 1rem 2.25rem !important;
+              }
+
+              .home-locate-image {
+                position: static !important;
+                display: block !important;
+                width: 100% !important;
+                height: 13.75rem !important;
+                max-height: none !important;
+                object-fit: contain !important;
+                opacity: 1 !important;
+              }
+
+              .home-locate-copy,
+              .home-locate-action {
+                position: relative !important;
+                z-index: 1 !important;
+              }
+
+              .home-locate-copy {
+                padding-top: 1.25rem !important;
+              }
+
+              .home-locate-title {
+                font-size: 1.55rem !important;
+                line-height: 1.1 !important;
+                font-weight: 700 !important;
+              }
+
+              .home-locate-title .home-provide-title-accent {
+                font-size: inherit !important;
+                line-height: inherit !important;
+              }
+
+              .home-locate-copy p {
+                margin-top: 0.6rem !important;
+                max-width: 17.5rem !important;
+                font-size: 0.82rem !important;
+                line-height: 1.28 !important;
+              }
+
+              .home-locate-action {
+                margin-top: 2.6rem !important;
+              }
+
+              .home-locate-phone {
+                font-size: 0.9rem !important;
+                font-weight: 700 !important;
+              }
+
+              .home-locate-divider {
+                margin-top: 1.35rem !important;
+                margin-bottom: 1.7rem !important;
+                gap: 1rem !important;
+                font-size: 0.9rem !important;
+              }
+
+              .home-locate-divider span:not(:nth-child(2)) {
+                width: 6.5rem !important;
+              }
+
+              .home-locate-button {
+                width: 9.5rem !important;
+                min-width: 0 !important;
+                padding: 0.8rem 1rem !important;
+                font-size: 0.78rem !important;
+              }
+
+              .home-overview-body,
+              .home-overview-body-secondary {
+                margin-top: 1rem !important;
+                font-size: 0.95rem !important;
+                line-height: 1.42 !important;
+                color: #252525 !important;
+                overflow-wrap: normal !important;
+              }
+
+              .home-overview-body-secondary {
+                margin-top: 1rem !important;
+              }
             }
           `}
         </style>
@@ -178,7 +337,7 @@ const Hero = () => {
       </section>
 
       <section className="mx-auto max-w-[1720px] px-6 py-16 sm:px-10 lg:px-20 lg:py-20">
-        <h2 className="text-center text-[34px] font-extrabold leading-tight sm:text-[42px]">
+        <h2 className="text-center text-[34px] font-bold leading-tight sm:text-[42px]">
           Devices We Repair
         </h2>
 
@@ -206,24 +365,24 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1720px] items-center gap-10 px-6 py-18 sm:px-10 lg:grid-cols-[1.05fr_1fr] lg:px-20 lg:py-24">
-        <div className="overflow-hidden">
+      <section className="home-overview-section mx-auto grid max-w-[1720px] items-start gap-10 px-6 py-14 sm:px-10 lg:grid-cols-[0.98fr_1fr] lg:px-20 lg:py-16">
+        <div className="home-overview-media overflow-hidden">
           <img
             src="/imgi_8_Apple-Self-Service-Mac-Repair-August-2022-hero.jpg.news_app_ed.webp"
             alt="Technician repairing an Apple device"
-            className="h-full min-h-[260px] w-full object-cover sm:min-h-[420px]"
+            className="home-overview-image h-full min-h-[200px] w-full object-cover sm:min-h-[420px] lg:h-[588px]"
           />
         </div>
 
-        <div className="max-w-[700px]">
-          <p className="mb-6 text-[18px] font-medium uppercase tracking-wide text-black">
+        <div className="home-overview-copy max-w-[780px] pt-8 lg:pt-16">
+          <p className="home-overview-eyebrow mb-7 text-[24px] font-normal uppercase leading-none tracking-normal text-black">
             Overview
           </p>
-          <h1 className="text-[42px] font-extrabold leading-[1.08] text-[#171a23] sm:text-[52px] lg:text-[58px]">
-            <span className="text-[#ff6534]">Our firm</span> is built on
+          <h2 className="home-overview-title text-[30px] font-bold leading-[1.08] text-[#171a23] sm:text-[28px] lg:text-[38px] xl:text-[48px]">
+            <span className="home-overview-title-accent">Our firm</span> is built on
             providing excellent customer service.
-          </h1>
-          <p className="mt-6 text-[18px] font-normal leading-relaxed text-[#353535] sm:text-[19px]">
+          </h2>
+          <p className="home-overview-body mt-6 text-[19px] font-normal leading-[1.35] text-[#353535] sm:text-[18px] lg:text-[18px]">
             Let's be sincere. There are several choices available when it comes
             to apple repair services. People rely more than ever on their mobile
             gadgets in the modern environment. <strong>Repair My Gadget</strong>{" "}
@@ -231,6 +390,7 @@ const Hero = () => {
             almost everything thanks to our extensive experience repairing Apple
             devices.
           </p>
+          <p className="home-overview-body-secondary mt-5">We place a great deal of emphasis on the caliber of our repairs and parts to make sure your interaction with us is flawless. We make sure your smartphone keeps its original quality and features by using high-grade components.</p>
         </div>
       </section>
 
@@ -238,10 +398,10 @@ const Hero = () => {
         <p className="mb-6 text-[18px] font-medium uppercase tracking-wide text-black">
           Overview
         </p>
-        <h2 className="text-[34px] font-extrabold leading-tight sm:text-[42px] lg:text-[48px]">
-          <span className="text-[#ff6534]">Things</span> We Provide
+        <h2 className="text-[34px] font-bold leading-tight sm:text-[42px] lg:text-[44px]">
+          <span className="home-provide-title-accent">Things</span> We Provide
         </h2>
-        <p className="mt-6 max-w-[1500px] text-[18px] leading-relaxed text-[#353535] sm:text-[19px]">
+        <p className="mt-6 max-w-[1500px] text-[18px] leading-relaxed text-[#353535] sm:text-[17px]">
           <strong>Repair My Gadget</strong> provides a wide range of Apple repair
           services for any Apple product. This indicates that we can handle
           almost any problem you might encounter. Learn more about the repairs we
@@ -261,7 +421,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className="mt-16 grid gap-10 text-[18px] leading-relaxed text-[#353535] lg:grid-cols-2 lg:text-[19px]">
+        <div className="mt-16 grid gap-10 text-[18px] leading-[1.25] text-[#353535] lg:grid-cols-2 lg:text-[19px]">
           <p>
             Accidents sometimes happen, and we can assist if you have managed to
             fracture the screen of your gadget. We replace screens on almost all
@@ -287,7 +447,7 @@ const Hero = () => {
               <div key={benefit.title} className="flex gap-6">
                 <Icon className="mt-2 shrink-0 text-[48px] text-[#fb5c1c]" />
                 <div>
-                  <h3 className="text-[22px] font-extrabold leading-tight text-[#171a23]">
+                  <h3 className="text-[22px] font-bold leading-tight text-[#171a23]">
                     {benefit.title}
                   </h3>
                   <p className="mt-3 text-[16px] leading-relaxed text-[#444]">
@@ -300,40 +460,40 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="bg-[#eef1fb]">
-        <div className="mx-auto grid max-w-[1800px] items-center gap-8 px-6 py-12 sm:px-10 lg:grid-cols-[0.9fr_1fr_0.8fr] lg:px-20">
+      <section className="home-locate-section bg-[#eef1fb]">
+        <div className="home-locate-inner mx-auto grid max-w-[1800px] items-center gap-8 px-6 py-12 sm:px-10 lg:grid-cols-[0.9fr_1fr_0.8fr] lg:px-20">
           <img
             src="/imgi_9_gsm2-cta-laptop.webp"
             alt="Laptop repair"
-            className="mx-auto max-h-[250px] object-contain"
+            className="home-locate-image mx-auto max-h-[250px] object-contain"
           />
 
-          <div>
-            <h2 className="text-[38px] font-extrabold leading-tight sm:text-[46px]">
-              <span className="text-[#ff6534]">Locate</span> your fix
+          <div className="home-locate-copy">
+            <h2 className="home-locate-title text-[38px] font-bold leading-tight sm:text-[46px] ">
+              <span className="home-provide-title-accent">Locate</span> your fix
             </h2>
-            <p className="mt-5 max-w-[620px] text-[17px] leading-relaxed text-[#333] sm:text-[18px]">
+            <p className="mt-5 max-w-[620px] text-[16px] leading-relaxed text-[#333] sm:text-[17px]">
               To make sure we have the components in stock to fix your device,
               find the appropriate repair for it and select your preferred
               booking method, time, and date.
             </p>
           </div>
 
-          <div className="text-center">
+          <div className="home-locate-action text-center">
             <a
               href="tel:01932844494"
-              className="text-[34px] font-extrabold text-[#333] sm:text-[40px]"
+              className="home-locate-phone text-[35px] font-semibold text-[#333] sm:text-[35px]"
             >
               01932 844494
             </a>
-            <div className="my-7 flex items-center justify-center gap-7 text-[20px] font-bold text-[#333]">
+            <div className="home-locate-divider my-7 flex items-center justify-center gap-7 text-[20px] font-bold text-[#333]">
               <span className="h-px w-28 bg-[#333]" />
               <span>or</span>
               <span className="h-px w-28 bg-[#333]" />
             </div>
             <Link
-              to="/All"
-            className="inline-flex w-full justify-center bg-[#fb5c1c] px-9 py-4 text-[17px] font-bold text-white transition-colors duration-200 hover:bg-[#df4a10] min-[420px]:w-auto min-[420px]:min-w-[240px]"
+              to="/contact"
+            className="home-locate-button inline-flex w-full justify-center bg-[#fb5c1c] px-9 py-4 text-[16px] font-bold text-white transition-colors duration-200 hover:bg-[#df4a10] min-[420px]:w-[170px] min-[420px]:min-w-[200px]"
             >
               Contact Us
             </Link>

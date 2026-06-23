@@ -50,6 +50,11 @@ const RepairDetail = () => {
     );
   };
 
+  const getOptionPrice = (option) => {
+    const variant = selectedVariants[option.title] || option.variants?.[0];
+    return option.variantPrices?.[variant] || option.price;
+  };
+
   const submitBooking = () => {
     const selectedIssues = options
       .filter((option) => selected.includes(option.title))
@@ -60,6 +65,7 @@ const RepairDetail = () => {
 
         return {
           ...option,
+          price: getOptionPrice(option),
           selectedVariant: variant,
           title: `${option.title} - ${variant}`,
         };
@@ -86,7 +92,7 @@ const RepairDetail = () => {
       >
         <div className="absolute inset-0 bg-[#eef1fb]/82" />
         <div className="relative z-10 mx-auto max-w-[1120px]">
-          <h1 className="text-[38px] font-extrabold leading-tight text-[#171a23] sm:text-[48px] lg:text-[56px]">
+          <h1 className="text-[38px] font-bold leading-tight text-[#171a23] sm:text-[48px] lg:text-[56px]">
             Repairs Detail
           </h1>
           <p className="mx-auto mt-5 max-w-[980px] text-[15px] font-medium leading-relaxed text-[#252936] sm:text-[17px]">
@@ -100,7 +106,7 @@ const RepairDetail = () => {
         <div className="border border-neutral-300 bg-[#fafafa] p-6 sm:p-8">
           <div className="grid gap-6 lg:grid-cols-[320px_1fr] lg:items-start">
             <div>
-              <h2 className="text-[28px] font-extrabold leading-tight sm:text-[34px]">
+              <h2 className="text-[28px] font-bold leading-tight sm:text-[34px]">
                 {detail.title}
               </h2>
               <div className="mt-6 flex h-[270px] max-w-[300px] items-center justify-center rounded-md border border-neutral-300 bg-[#f3f5f7] p-6">
@@ -148,7 +154,7 @@ const RepairDetail = () => {
                     className="mt-1 h-6 w-6 accent-[#fb6433]"
                   />
                   <span>
-                    <span className="block text-[24px] font-extrabold leading-tight text-[#252936] sm:text-[28px]">
+                    <span className="block text-[24px] font-bold leading-tight text-[#252936] sm:text-[28px]">
                       {option.title}
                     </span>
                     <span className="mt-6 block text-[16px] leading-relaxed text-[#3e4650] sm:text-[17px]">
@@ -159,7 +165,7 @@ const RepairDetail = () => {
                     </span>
                     {option.variants && (
                       <span className="mt-5 block">
-                        <span className="mb-3 block text-[16px] font-extrabold text-[#171a23] sm:text-[17px]">
+                        <span className="mb-3 block text-[16px] font-bold text-[#171a23] sm:text-[17px]">
                           Options:
                         </span>
                         {option.variants.map((variant) => (
@@ -184,7 +190,7 @@ const RepairDetail = () => {
                       </span>
                     )}
                     <span className="mt-3 block text-[16px] font-semibold text-[#3e4650] sm:text-[17px]">
-                      Price: {option.price}
+                      Price: {getOptionPrice(option)}
                     </span>
                   </span>
                 </div>
@@ -194,7 +200,7 @@ const RepairDetail = () => {
 
           <button
             type="button"
-            className="mt-8 flex min-h-[70px] w-full items-center rounded-md bg-[#fb6433] px-8 text-left text-[18px] font-extrabold text-white transition-colors duration-200 hover:bg-[#df4a10] disabled:cursor-not-allowed disabled:bg-[#ffd8ca] disabled:text-[#b78373]"
+            className="mt-8 flex min-h-[70px] w-full items-center rounded-md bg-[#fb6433] px-8 text-left text-[18px] font-bold text-white transition-colors duration-200 hover:bg-[#df4a10] disabled:cursor-not-allowed disabled:bg-[#ffd8ca] disabled:text-[#b78373]"
             disabled={selected.length === 0}
             onClick={submitBooking}
           >

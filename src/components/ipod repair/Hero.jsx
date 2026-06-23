@@ -35,7 +35,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-white/40" />
         <div className="relative mx-auto max-w-[1080px]">
-          <h1 className="text-[30px] font-extrabold leading-tight sm:text-[38px] lg:text-[42px]">
+          <h1 className="text-[30px] font-bold leading-tight sm:text-[38px] lg:text-[42px]">
             iPod Servicing
           </h1>
           <p className="mx-auto mt-4 max-w-[850px] text-[14px] font-medium leading-relaxed text-[#242833] sm:text-[15px]">
@@ -47,7 +47,7 @@ const Hero = () => {
 
       <section className="rmg-model-section mx-auto max-w-[1500px] px-6 py-12 sm:px-10 lg:px-16 lg:py-14">
         <div className="flex flex-wrap items-center justify-between gap-5">
-          <h2 className="text-[25px] font-extrabold leading-tight sm:text-[32px] lg:text-[36px]">
+          <h2 className="text-[25px] font-bold leading-tight sm:text-[32px] lg:text-[36px]">
             <span className="text-[#fb6433]">Select your</span> iPod model
           </h2>
           <Link
@@ -76,7 +76,7 @@ const Hero = () => {
                   className="max-h-full max-w-full object-contain transition-transform duration-200 group-hover:scale-105"
                 />
               </div>
-              <h3 className="mt-4 text-[17px] font-extrabold leading-tight">
+              <h3 className="mt-4 text-[17px] font-bold leading-tight">
                 {model.title}
               </h3>
             </Link>
@@ -92,7 +92,7 @@ const Hero = () => {
             className="mx-auto max-h-[320px] w-full object-contain"
           />
           <div>
-            <h2 className="text-[27px] font-extrabold leading-tight sm:text-[34px] lg:text-[38px]">
+            <h2 className="text-[27px] font-bold leading-tight sm:text-[34px] lg:text-[38px]">
               Reliable iPod repairs with careful testing
             </h2>
             <p className="mt-5 max-w-[720px] text-[15px] leading-relaxed text-[#3a3a3a] sm:text-[16px]">
@@ -117,7 +117,7 @@ const Hero = () => {
               <div key={benefit.title} className="flex gap-5">
                 <Icon className="mt-2 shrink-0 text-[36px] text-[#fb5c1c]" />
                 <div>
-                  <h3 className="text-[18px] font-extrabold leading-tight">
+                  <h3 className="text-[18px] font-bold leading-tight">
                     {benefit.title}
                   </h3>
                   <p className="mt-3 text-[14px] leading-relaxed text-[#666]">
@@ -131,7 +131,7 @@ const Hero = () => {
       </section>
 
       <section className="mx-auto max-w-[1500px] px-6 py-12 text-center sm:px-10 lg:px-16 lg:py-14">
-        <h2 className="text-[30px] font-extrabold leading-tight sm:text-[38px]">
+        <h2 className="text-[30px] font-bold leading-tight sm:text-[38px]">
           <span className="text-[#fb6433]">Our</span> method of repair
         </h2>
         <p className="mx-auto mt-4 max-w-[1050px] text-[15px] leading-relaxed text-[#3a3a3a] sm:text-[16px]">
@@ -141,7 +141,7 @@ const Hero = () => {
 
         <div className="mt-12 grid items-center gap-10 text-left lg:grid-cols-2">
           <div>
-            <h3 className="text-[23px] font-extrabold leading-tight">
+            <h3 className="text-[23px] font-bold leading-tight">
               Battery and charging faults
             </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-[#3a3a3a] sm:text-[16px]">
@@ -161,7 +161,7 @@ const Hero = () => {
             className="h-[220px] w-full object-cover sm:h-[270px]"
           />
           <div>
-            <h3 className="text-[23px] font-extrabold leading-tight">
+            <h3 className="text-[23px] font-bold leading-tight">
               Screen and button repairs
             </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-[#3a3a3a] sm:text-[16px]">

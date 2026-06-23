@@ -1,4 +1,4 @@
-ï»¿import { useState } from "react";
+import { useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import {
   FaBoxOpen,
@@ -12,55 +12,55 @@ import {
 const products = [
   {
     name: "Samsung S24",
-    price: "Â£549.00",
+    price: "£549.00",
     image: "/imgi_6_samsung-unpacked-2023-s23-4.webp",
     detail: "Current Galaxy performance with a clean body and tested battery.",
   },
   {
     name: "Samsung S23",
-    price: "Â£399.00",
+    price: "£399.00",
     image: "/imgi_3_Galaxy S series-1280x1280.webp",
     detail: "A polished Galaxy S model with strong camera and display checks.",
   },
   {
     name: "Samsung S22 Ultra",
-    price: "Â£429.00",
+    price: "£429.00",
     image: "/imgi_12_SamsungGalaxyS22Ultra5GRepair._8b261bf0-af1e-4dc2-94bd-e8a654b8bc26.webp",
     detail: "Large-screen Ultra model, checked for S Pen, camera and charging.",
   },
   {
     name: "Samsung Flip 4",
-    price: "Â£379.00",
+    price: "£379.00",
     image: "/imgi_2_Galaxy Flip & Fold series-1280x1280.webp",
     detail: "Foldable design with hinge, screen and battery condition reviewed.",
   },
   {
     name: "Note 20 Ultra",
-    price: "Â£599.00",
+    price: "£599.00",
     image: "/imgi_3_samsung-galaxy-note20-ultra-5g-mystic-bronze-official-image.webp",
     detail: "Premium Note series phone with display, pen and camera testing.",
   },
   {
     name: "Galaxy A Series",
-    price: "Â£189.00",
+    price: "£189.00",
     image: "/imgi_5_Galaxy A series.webp",
     detail: "Affordable refurbished Galaxy option for dependable everyday use.",
   },
   {
     name: "Galaxy Note Series",
-    price: "Â£249.00",
+    price: "£249.00",
     image: "/imgi_4_Galaxy Note series.webp",
     detail: "A practical large-display Samsung with all core features checked.",
   },
   {
     name: "Galaxy S Series",
-    price: "Â£299.00",
+    price: "£299.00",
     image: "/imgi_7_samsung-repairs.webp",
     detail: "Refurbished Galaxy S performance with warranty support included.",
   },
   {
     name: "Samsung Fold Series",
-    price: "Â£649.00",
+    price: "£649.00",
     image: "/imgi_11_7d3ea32f601b45ab833bdde8e082d746_samsungs.png",
     detail: "Premium foldable stock, inspected for hinge movement and displays.",
   },
@@ -156,7 +156,7 @@ const Hero = () => {
           <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[#fb6433]">
             Certified refurbished
           </p>
-          <h1 className="mt-4 max-w-[780px] text-[38px] font-extrabold leading-tight sm:text-[46px] lg:text-[54px]">
+          <h1 className="mt-4 max-w-[780px] text-[38px] font-bold leading-tight sm:text-[46px] lg:text-[54px]">
             Refurbished Samsung
           </h1>
           <p className="mt-5 max-w-[800px] text-[16px] leading-relaxed text-[#333844] sm:text-[18px]">
@@ -197,7 +197,7 @@ const Hero = () => {
             <p className="text-[13px] font-bold uppercase tracking-[0.16em] text-[#fb6433]">
               Available models
             </p>
-            <h2 className="mt-3 text-[30px] font-extrabold leading-tight sm:text-[38px]">
+            <h2 className="mt-3 text-[30px] font-bold leading-tight sm:text-[38px]">
               Pick your refurbished Samsung
             </h2>
           </div>
@@ -238,7 +238,7 @@ const Hero = () => {
                     />
                   </div>
                   <div className="rmg-refurb-front-copy px-6 py-6 text-center">
-                    <h3 className="text-[22px] font-extrabold leading-tight">
+                    <h3 className="text-[22px] font-bold leading-tight">
                       {product.name}
                     </h3>
                     <p className="mt-3 text-[17px] font-semibold text-black">
@@ -255,13 +255,13 @@ const Hero = () => {
                     <p className="text-[12px] font-bold uppercase tracking-[0.18em] text-[#ff8a5c]">
                       Refurbished
                     </p>
-                    <h3 className="mt-3 text-[24px] font-extrabold leading-tight">
+                    <h3 className="mt-3 text-[24px] font-bold leading-tight">
                       {product.name}
                     </h3>
                     <p className="mt-4 text-[15px] leading-relaxed text-white/78">
                       {product.detail}
                     </p>
-                    <p className="mt-6 text-[18px] font-extrabold">
+                    <p className="mt-6 text-[18px] font-bold">
                       {product.price}
                     </p>
                     <div className="rmg-refurb-actions mt-7 flex flex-wrap justify-center gap-3">
@@ -306,7 +306,7 @@ const Hero = () => {
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
                 <Icon className="mx-auto text-[42px] text-[#fb6433]" />
-                <h3 className="mt-5 text-[22px] font-extrabold leading-tight">
+                <h3 className="mt-5 text-[22px] font-bold leading-tight">
                   {benefit.title}
                 </h3>
                 <p className="mx-auto mt-3 max-w-[360px] text-[15px] leading-relaxed text-[#444]">
@@ -340,7 +340,7 @@ const Hero = () => {
                 </p>
                 <h2
                   id="samsung-refurbished-popup-title"
-                  className="mt-1 text-[24px] font-extrabold leading-tight sm:text-[30px]"
+                  className="mt-1 text-[24px] font-bold leading-tight sm:text-[30px]"
                 >
                   {selectedProduct.name}
                 </h2>
@@ -405,7 +405,7 @@ const Hero = () => {
                     Warranty support included
                   </div>
                 </div>
-                <p className="mt-6 text-[22px] font-extrabold text-[#171a23]">
+                <p className="mt-6 text-[22px] font-bold text-[#171a23]">
                   {selectedProduct.price}
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">

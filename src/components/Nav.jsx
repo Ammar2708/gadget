@@ -131,7 +131,7 @@ const Nav = ({ cartCount = 0, onCartOpen }) => {
           <span className="relative">
             <FaShoppingCart className="text-[15px]" aria-hidden="true" />
             {cartCount > 0 && (
-              <span className="absolute -right-2.5 -top-2.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#fb6433] px-1 text-[10px] font-extrabold leading-none text-white">
+              <span className="absolute -right-2.5 -top-2.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#fb6433] px-1 text-[10px] font-bold leading-none text-white">
                 {cartCount}
               </span>
             )}
@@ -218,7 +218,7 @@ const Nav = ({ cartCount = 0, onCartOpen }) => {
             <span className="relative">
               <FaShoppingCart className="text-base" aria-hidden="true" />
               {cartCount > 0 && (
-                <span className="absolute -right-2.5 -top-2.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#fb6433] px-1 text-[10px] font-extrabold leading-none text-white">
+                <span className="absolute -right-2.5 -top-2.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#fb6433] px-1 text-[10px] font-bold leading-none text-white">
                   {cartCount}
                 </span>
               )}
