@@ -5,6 +5,7 @@ import CartDrawer from "../components/CartDrawer";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import FloatingWhatsApp from "../components/FloatingWhatsApp";
 
 const RootLayout = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -69,6 +70,7 @@ const RootLayout = () => {
         />
       </main>
       <Footer />
+      <FloatingWhatsApp />
       <CartDrawer
         isOpen={isCartOpen}
         items={cartItems}
