@@ -375,7 +375,7 @@ const Hero = () => {
         </div>
 
         <div className="home-overview-copy max-w-[780px] pt-8 lg:pt-16">
-          <p className="home-overview-eyebrow mb-7 text-[22px] font-[460] uppercase leading-6 tracking-normal text-black">
+          <p className="home-overview-eyebrow mb-7 text-[15px] font-[475] uppercase leading-7 tracking-normal text-black">
             Overview
           </p>
           <h2 className="home-overview-title text-[30px] font-bold leading-[1.08] text-[#171a23] sm:text-[28px] lg:text-[38px] xl:text-[48px]">
