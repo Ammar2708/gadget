@@ -375,7 +375,7 @@ const Hero = () => {
         </div>
 
         <div className="home-overview-copy max-w-[780px] pt-8 lg:pt-16">
-          <p className="home-overview-eyebrow mb-7 text-[24px] font-normal uppercase leading-none tracking-normal text-black">
+          <p className="home-overview-eyebrow mb-7 text-[22px] font-[460] uppercase leading-6 tracking-normal text-black">
             Overview
           </p>
           <h2 className="home-overview-title text-[30px] font-bold leading-[1.08] text-[#171a23] sm:text-[28px] lg:text-[38px] xl:text-[48px]">
@@ -391,6 +391,46 @@ const Hero = () => {
             devices.
           </p>
           <p className="home-overview-body-secondary mt-5">We place a great deal of emphasis on the caliber of our repairs and parts to make sure your interaction with us is flawless. We make sure your smartphone keeps its original quality and features by using high-grade components.</p>
+        </div>
+      </section>
+      <section className="home-locate-section bg-[#eef1fb]">
+        <div className="home-locate-inner mx-auto grid max-w-[1800px] items-center gap-8 px-6 py-12 sm:px-10 lg:grid-cols-[0.9fr_1fr_0.8fr] lg:px-20">
+          <img
+            src="/imgi_9_gsm2-cta-laptop.webp"
+            alt="Laptop repair"
+            className="home-locate-image mx-auto max-h-[250px] object-contain"
+          />
+
+          <div className="home-locate-copy">
+            <h2 className="home-locate-title text-[38px] font-bold leading-tight sm:text-[46px] ">
+              <span className="home-provide-title-accent">Locate</span> your fix
+            </h2>
+            <p className="mt-5 max-w-[620px] text-[16px] leading-relaxed text-[#333] sm:text-[17px]">
+              To make sure we have the components in stock to fix your device,
+              find the appropriate repair for it and select your preferred
+              booking method, time, and date.
+            </p>
+          </div>
+
+          <div className="home-locate-action text-center">
+            <a
+              href="tel:01932844494"
+              className="home-locate-phone text-[35px] font-semibold text-[#333] sm:text-[35px]"
+            >
+              01932 844494
+            </a>
+            <div className="home-locate-divider my-7 flex items-center justify-center gap-7 text-[20px] font-bold text-[#333]">
+              <span className="h-px w-28 bg-[#333]" />
+              <span>or</span>
+              <span className="h-px w-28 bg-[#333]" />
+            </div>
+            <Link
+              to="/contact"
+            className="home-locate-button inline-flex w-full justify-center bg-[#fb5c1c] px-9 py-4 text-[16px] font-bold text-white transition-colors duration-200 hover:bg-[#df4a10] min-[420px]:w-[170px] min-[420px]:min-w-[200px]"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -460,46 +500,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="home-locate-section bg-[#eef1fb]">
-        <div className="home-locate-inner mx-auto grid max-w-[1800px] items-center gap-8 px-6 py-12 sm:px-10 lg:grid-cols-[0.9fr_1fr_0.8fr] lg:px-20">
-          <img
-            src="/imgi_9_gsm2-cta-laptop.webp"
-            alt="Laptop repair"
-            className="home-locate-image mx-auto max-h-[250px] object-contain"
-          />
-
-          <div className="home-locate-copy">
-            <h2 className="home-locate-title text-[38px] font-bold leading-tight sm:text-[46px] ">
-              <span className="home-provide-title-accent">Locate</span> your fix
-            </h2>
-            <p className="mt-5 max-w-[620px] text-[16px] leading-relaxed text-[#333] sm:text-[17px]">
-              To make sure we have the components in stock to fix your device,
-              find the appropriate repair for it and select your preferred
-              booking method, time, and date.
-            </p>
-          </div>
-
-          <div className="home-locate-action text-center">
-            <a
-              href="tel:01932844494"
-              className="home-locate-phone text-[35px] font-semibold text-[#333] sm:text-[35px]"
-            >
-              01932 844494
-            </a>
-            <div className="home-locate-divider my-7 flex items-center justify-center gap-7 text-[20px] font-bold text-[#333]">
-              <span className="h-px w-28 bg-[#333]" />
-              <span>or</span>
-              <span className="h-px w-28 bg-[#333]" />
-            </div>
-            <Link
-              to="/contact"
-            className="home-locate-button inline-flex w-full justify-center bg-[#fb5c1c] px-9 py-4 text-[16px] font-bold text-white transition-colors duration-200 hover:bg-[#df4a10] min-[420px]:w-[170px] min-[420px]:min-w-[200px]"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
